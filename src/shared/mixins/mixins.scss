@@ -1,0 +1,15 @@
+@mixin pureDiv {
+  margin: 0px;
+  padding: 0px;
+};
+
+@mixin correctBtn{
+  cursor: pointer;
+  border: none;
+  outline: none;
+};
+
+@mixin hundredHW{
+  height: 100%;
+  width: 100%;
+};
