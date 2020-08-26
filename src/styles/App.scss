@@ -1,24 +1,15 @@
 @import "../shared/mixins/mixins.scss";
-
-html, body {
-  @include pureDiv;
-  @include hundredHW;
-  overflow: hidden;
-  background-color: gray;
-}
-
-body {
-  perspective: 1px; 
-  transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-family: 'Amatic SC', cursive;
-  color: #fff;
-}
+@import "../shared/variables/variables.scss";
 
 h1 {
   color: #27aedb;
   text-align: center;
   background-color: red;
-}
+};
 
+.App{
+  @include flexCenterHW;
+  &_container{
+    width: $mainContainerWidth;
+  }
+};

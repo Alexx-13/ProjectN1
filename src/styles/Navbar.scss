@@ -1,0 +1,22 @@
+@import "../shared/mixins/mixins.scss";
+
+.navbar{
+  @include flexSpaceBetweenHW;
+  background: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  // padding: 50px;
+  font-size: 20px;
+  &_left{
+    @include flexCenter;
+    &_lang{
+      @include flexCenter;
+      height: 20vh;
+    }
+  }
+};
+
+.navbar.active{
+  background: red;
+}

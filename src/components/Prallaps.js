@@ -6,6 +6,5 @@ export default function Prallaps(){
     <header>
       <h2>Info from Parallaps</h2>
     </header>
-
   )
 }
