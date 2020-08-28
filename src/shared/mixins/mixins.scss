@@ -63,3 +63,29 @@
 };
 
 /* */
+
+/* flex sides */
+@mixin flexEnd{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+};
+
+@mixin flexStart{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+};
+
+/* */
+
+/* styles for nav btns */ 
+@mixin navBtnStyles{
+  @include correctBtn;
+  width: 100px;
+  height: 30px;
+  border-radius: $borderRadius;
+  background-color: $lightBlue;
+  color: $white;
+};
+/* */

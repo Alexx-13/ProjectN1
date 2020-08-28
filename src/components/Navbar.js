@@ -6,7 +6,7 @@ import '../styles/Navbar.scss';
 export default function Navbar(props){
   const { t, i18n } = useTranslation();
   const [ showDropDown, setShowDropDown ] = useState(false);
-  const [ switchLanguage, setSwitchLanguage ] = useState("EN");
+  const [ switchLanguage, setSwitchLanguage ] = useState("English");
 
   const changeLanguage = lng => {
     i18n.changeLanguage(lng);
@@ -18,11 +18,11 @@ export default function Navbar(props){
         className="langBtn"
         onClick={() => {
           changeLanguage(props.language);
-          setSwitchLanguage(props.language);
-          setShowDropDown(false)
+          setSwitchLanguage(props.fullName);
+          setShowDropDown(false);
         }}
       >
-        {props.name}
+        {props.language}
       </button>
     )
   };
@@ -36,37 +36,50 @@ export default function Navbar(props){
     <nav className="navbar">
       <div className="navbar_left">
         <div className="navbar_left_logo">
-          <h2>LOGO</h2>
+          <h2>Portfolio</h2>
         </div>
-        <div className="navbar_left_lang">
+        <div className="navbar_left_lang"
+          onMouseEnter={() => {
+            setShowDropDown(true);
+          }}
+          onMouseLeave={() => {setShowDropDown(false)}}
+        >
           <button
-            onClick={() => {setShowDropDown(!showDropDown); handleScroll()}}
+            id="main-lang-btn"
+            onClick={() => {setShowDropDown(!showDropDown)}}
           >
             {switchLanguage}
           </button>
-          {showDropDown ?
+          {showDropDown && switchLanguage === "English" ?
             <ul>
               <li>
                 <LangBtn 
-                  language="EN" 
-                  name="English"
-                />
-              </li>
-              <li>
-                <LangBtn 
                   language="RU" 
-                  name="Русский"
+                  fullName="Русский"
                 />
               </li>
             </ul>      
+          : showDropDown && switchLanguage === "Русский"  ? 
+          <ul>
+              <li>
+                <LangBtn 
+                  language="EN" 
+                  fullName="English"
+                />
+              </li> 
+            </ul>     
           : null}
         </div>
       </div>
       
       <div className="navbar_right">
-        <div className="navBar_right_menu">
+        <div className="navbar_right_menu">
           <button>EXAMPLES</button>
-          <button>CHANGE THEME</button>
+          <div className="toggle">
+            <input type="checkbox" className="check" />
+            <b className="b switch"></b>
+            <b className="b track"></b>
+          </div>
         </div>
       </div>
 

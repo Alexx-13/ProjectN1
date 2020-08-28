@@ -1,0 +1,95 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.main{
+  @include flexCenterHW;
+  flex-direction: column;
+  font-family: $logoFont;
+  h1{
+    font-size: $h1FontSize;
+    text-align: center;
+  }
+  &_section{
+    display: inline-flex;
+    width: 100%;
+    height: 3000px; // temperary
+  }
+};
+
+
+#section-a{
+  height: 100%;
+  font-family: $logoFont;
+  &_left{
+    @include flexCenterHW;
+    &_container{
+      @include flexEnd;
+      flex-direction: column;
+      text-align: end;
+      &_message-first, &_message-second{
+        color: $black;
+        background-color: $white;
+        border-radius: $borderRadius $borderRadius 0 $borderRadius;
+        margin-top: $marginAlignGeneral;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        h3{
+          margin-bottom: 0;
+        }
+        h3, h4{
+          padding: 0 $paddingJustifyGeneral;
+        }
+      }
+    }
+  }
+  &_right{
+    @include flexCenterHW;
+    img{
+      margin-top: $marginAlignGeneral;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
+  }
+};
+
+#section-b{
+  background-color: green;
+  flex-direction: column;
+  &_left{
+    @include flexCenterHW;
+    background-image: url("../assets/images/first-arrow.svg");
+    background-repeat: no-repeat;
+    &_container{
+      @include flexEnd;
+      flex-direction: column;
+      &_block-first{
+        @include flexCenterHW;
+        img{
+          margin-left: -60vw;
+          margin-top: -5vw;
+        }
+      }
+    }
+  }
+}
+
+#section-c{
+  background-color: purple;
+}
+
+#section-d{
+  background-color: blue;
+}
+
+.importantLogo{
+  width: $importantLogoSize;
+  height: $importantLogoSize;
+}
+
+.unimportantLogo{
+  width: $unimportantLogoSize;
+  height: $unimportantLogoSize;
+}
+
+
+

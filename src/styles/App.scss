@@ -1,14 +1,15 @@
 @import "../shared/mixins/mixins.scss";
 @import "../shared/variables/variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
 
-h1 {
-  color: #27aedb;
-  text-align: center;
-  background-color: red;
+html,body{
+  @include pureDiv;
+  @include hundredHW;
 };
 
 .App{
   @include flexCenterHW;
+  flex-direction: column;
   &_container{
     width: $mainContainerWidth;
   }

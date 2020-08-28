@@ -1,0 +1,6 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.main-animation{
+  @include flexCenterHW;
+}

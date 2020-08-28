@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import '../styles/App.scss';
 
-import Prallaps from "./Prallaps";
+// import Prallaps from "./Prallaps";
 import Navbar from "./Navbar";
 import Main from "./Main";
 
@@ -11,12 +11,14 @@ function App() {
   
   return (
     <div className="App">
+      <Navbar />
       <div className="App_container">
-         <Navbar />
-        <h1>My wat to the goal</h1>
-        <p>{t('paragraph')}</p>
-        <Prallaps />
+
+        {/* <h1>My wat to the goal</h1>
+        <p>{t('paragraph')}</p> */}
         <Main />
+        {/* <Prallaps /> */}
+
         
       </div>
     </div>
