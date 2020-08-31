@@ -5,6 +5,7 @@
 html,body{
   @include pureDiv;
   @include hundredHW;
+  // overflow-x:hidden;
 };
 
 .App{
