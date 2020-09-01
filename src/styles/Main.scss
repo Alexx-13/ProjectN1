@@ -12,7 +12,8 @@
   &_section{
     display: inline-flex;
     width: 100%;
-    height: 3000px; // temperary
+    height: 100%;
+    // height: 3000px; // temperary
   }
 };
 
@@ -53,11 +54,12 @@
 };
 
 #section-b{
+  // height: 4000px;
+  height: 100%;
   background-color: green;
   flex-direction: column;
   &_left{
     @include flexCenterHW;
-    background-image: url("../assets/images/first-arrow.svg");
     background-repeat: no-repeat;
     &_container{
       @include flexEnd;

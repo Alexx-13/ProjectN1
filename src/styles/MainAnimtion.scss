@@ -3,10 +3,17 @@
 
 .main-animation{
   @include flexCenterHW;
+  flex-direction: column;
   transition: all .2s ease-in;
-  svg{
-    .student-circle{
-      transition: all .2s ease-in;
-    }
+  .student{
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    bottom: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &_content-component{
+    @include flexSpaceBetweenHW;
   }
 }

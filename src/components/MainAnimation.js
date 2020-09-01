@@ -14,209 +14,111 @@ import rss from "../assets/images/rsschool-logo.svg";
 import diploma from "../assets/images/diploma-doc-logo.svg";
 import diplomaNHat from "../assets/images/diploma-head-n-doc-logo.svg";
 
+import react from "../assets/images/react-logo.svg";
+import reactHooks from "../assets/images/react-hooks-logo.svg";
+import redux from "../assets/images/redux-logo.svg";
+import english from "../assets/images/english-flag-logo.svg";
+import rssReact from "../assets/images/rss-react-logo.svg";
+import victory from "../assets/images/victory-logo.svg";
+import personal from "../assets/images/personal-development-logo.svg";
+
+import jest from "../assets/images/jest-logo.svg";
+import german from "../assets/images/german-flag-logo.svg";
+import figma from "../assets/images/figma-logo.svg";
+import svg from "../assets/images/svg-logo.svg";
+import junior from "../assets/images/junior-logo.svg";
+import specialist from "../assets/images/specialist-logo.svg";
+import reached from "../assets/images/reached-goal-logo.svg";
+
 
 export default function MainAnimtion(){
-  const [ windowHeight, setWindowHeight ] = useState(window.pageYOffset)
-  const [ studentXPosition, setStudentXPosition ] = useState("440");
-  const [ studentYPosition, setStudentYPosition ] = useState("0");
-  const [ fromStudent, setFromStudent ] = useState("0 0");
-  const [ toStudent, setToStudent ] = useState("0 0");
+  const [ windowHeight, setWindowHeight ] = useState(window.pageYOffset);
+  const [ studentVisability, setStudentVisability ] = useState(false);
+  const [ studentImage, setStudentImage ] = useState(student);
 
-  const [ firstGraduationXPosition, setFirstGraduationXPosition ] = useState("300")
-  const [ firstGraduationYPosition, setFirstGraduationYPosition ] = useState("900") // Perhaps Y could be always the same
-  const [ secondGraduationXPosition, setSecondGraduationXPosition ] = useState("700")
-  const [ secondGraduationYPosition, setSecondGraduationYPosition ] = useState("900")  // Perhaps Y could be always the same
-
-  const studentRadius = "60";
-  const wayIconsRadius = "40";
-  const completedRadius = "90";
-
-  const alignCenter = "500";
-  const goalAlignCenter = "430";
-
-  const studentIconSize = "25%";
-  const generalIconSize = "15%";
-  const goalIconSize = "35%";
-
-  const transfromTypeStudent = "translate";
-
-  const SvgCircleImage = (parameters) => {
+  const Student = () => {
     return(
-      <image
-        className={parameters.classProp}
-        x={parameters.x}
-        y={parameters.y}
-        width={parameters.width}
-        height={parameters.hight}
-        r={parameters.radius}
-        xlinkHref={parameters.image}
-      >
-        <animateTransform
-          attributeName="transform"
-          type={parameters.type}
-          from={parameters.from}
-          to={parameters.to}
-          begin="0s"
-          dur="2s"
-          repeatCount="indefinite"
-        />
-      </image>
+      <div className="student" 
+        style={{
+          backgroundImage: `url(${studentImage})`
+        }}
+      ></div>
+    )
+  };
+
+  const Content = (parameters) => {
+    return(
+      <div className="main-animation_content-component">
+        <div className="main-animation_content-component_left">
+          <SideText />
+        </div>
+        <div className="main-animation_content-component_center">
+          <div className="main-animation_content-component_center_container">
+            <img src={html}></img>
+            <img src={css}></img>
+            <img src={scss}></img>
+            <img src={webpack}></img>
+          </div>
+        </div>
+        <div className="main-animation_content-component_right">
+          <SideText />
+        </div>
+      </div>
+    )
+  };
+
+  const SideText = (parameters) => {
+    return(
+      <div className="main-animation_content-component_container">
+        <p>THERE SHOULD BE PASSED SOME TEXT</p>
+      </div>
     )
   };
 
   const getVerticalScrollPercentage = (element) => {
     let p = element.parentNode,
       pos = (element.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100;
-
-    if(Math.round(pos) === 20){
-      setToStudent("0 700")
-    } else if (Math.round(pos) < 20){
-      setToStudent("0 0")
-    };
-      
-    return Math.round(pos) + "%";
+    let percentages = Math.round(pos);
+    handleStudentScroll(percentages);
+  
+    return percentages;
   };
 
   const returnScrollPercentages = () => {
     setWindowHeight(getVerticalScrollPercentage(document.body));
   };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const handleStudentScroll = (percentages) => {
+    if(percentages >= 10 && percentages < 30){
+      setStudentVisability(true)
+    } else if (percentages >= 30 && percentages < 70){
+      setStudentImage(boostedStudent)
+    } else {
+      setStudentImage(student)
+      setStudentVisability(false);
+    }
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", returnScrollPercentages);
+    window.addEventListener("scroll", () => {
+      returnScrollPercentages();
+    });
   
     return () => {
-      window.removeEventListener("scroll", returnScrollPercentages);
+      window.removeEventListener("scroll", () => {
+        returnScrollPercentages();
+      });
     }
   }, []);
 
   return(
     <div className="main-animation">
       {windowHeight}
-      <div className="testi"></div>
-      <svg width="100%" height="100%">
 
-      <g>
-      <SvgCircleImage
-          classProp="student-circle"
-          x={studentXPosition}
-          y={studentYPosition}
-          width={studentIconSize}
-          height={studentIconSize}
-          radius={studentRadius}
-          image={student}
-          type={transfromTypeStudent}
-          from={fromStudent}
-          to={toStudent}
-        />
-
-
-        <SvgCircleImage
-          classProp="icon-circle"
-          x={alignCenter}
-          y="250"
-          width={generalIconSize}
-          height={generalIconSize}
-          radius={wayIconsRadius}
-          image={html}
-        />
-        <SvgCircleImage
-          classProp="icon-circle"
-          x={alignCenter}
-          y="400"
-          width={generalIconSize}
-          height={generalIconSize}
-          radius={wayIconsRadius}
-          image={css}
-        />
-        <SvgCircleImage
-          classProp="icon-circle"
-          x={alignCenter}
-          y="550"
-          width={generalIconSize}
-          height={generalIconSize}
-          radius={wayIconsRadius}
-          image={scss}
-        />
-         <SvgCircleImage
-          classProp="icon-circle"
-          x={alignCenter}
-          y="700"
-          width={generalIconSize}
-          height={generalIconSize}
-          radius={wayIconsRadius}
-          image={webpack}
-        />
-        <SvgCircleImage
-          classProp="icon-circle"
-          x={alignCenter}
-          y="550"
-          width={generalIconSize}
-          height={generalIconSize}
-          radius={wayIconsRadius}
-          image={scss}
-        />
-
-         <SvgCircleImage
-          classProp="near-goal-circle"
-          x={firstGraduationXPosition}
-          y={firstGraduationYPosition}
-          width={generalIconSize}
-          height={generalIconSize}
-          radius={wayIconsRadius}
-          image={diploma}
-        />
-        <SvgCircleImage
-          classProp="near-goal-circle"
-          x={secondGraduationXPosition}
-          y={secondGraduationYPosition}
-          width={generalIconSize}
-          height={generalIconSize}
-          radius={wayIconsRadius}
-          image={diplomaNHat}
-        />
-         <SvgCircleImage
-          classProp="goal-circle"
-          x={goalAlignCenter}
-          y="950"
-          width={goalIconSize}
-          height={goalIconSize}
-          radius={completedRadius}
-          image={rss}
-        />
-      </g>
-       
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </svg>
+      {studentVisability ? 
+        <Student /> 
+      : null}
+      <Content />
     </div>
   )
 }
