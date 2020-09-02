@@ -6,14 +6,64 @@
   flex-direction: column;
   transition: all .2s ease-in;
   .student{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     position: fixed;
     bottom: 50%;
+    left: 20%;
     background-repeat: no-repeat;
     background-size: contain;
   }
   &_content-component{
     @include flexSpaceBetweenHW;
+    .side-text{
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: $borderRadius $borderRadius;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    &_center{
+      &_container{
+        @include flexSpaceBetweenHW;
+        flex-direction: column;
+        .skills-icon{
+          width: 200px;
+          height: 200px;
+        }
+        .skills-icon:hover{
+          background-color: #fff;
+          margin-left: 300px;
+        }
+        &_goal{
+          @include flexCenterHW;
+          .sputnik-icon{
+            width: 150px;
+            height: 150px;
+          }
+          .goal{
+            margin-top: 100px;
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+    }
   }
+};
+
+@keyframes skillsIcon{
+  25% {
+    border: green white solid
+  }
+  // 50% {
+  //   border: green, green, none, none solid
+  // }
+  // 75% {
+  //   border: green, green, green, none solid
+  // }
+  100% {
+    border: green, greensolid
+  }
+
 }

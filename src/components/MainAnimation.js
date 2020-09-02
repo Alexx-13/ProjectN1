@@ -9,15 +9,17 @@ import boostedStudent from "../assets/images/student-first-doc-logo.svg";
 import html from "../assets/images/html-5-logo.svg";
 import css from "../assets/images/css-logo.svg";
 import scss from "../assets/images/sass-logo.svg";
-import webpack from "../assets/images/webpack-logo.svg";
+import js from "../assets/images/js-logo.svg";
 import rss from "../assets/images/rsschool-logo.svg";
 import diploma from "../assets/images/diploma-doc-logo.svg";
 import diplomaNHat from "../assets/images/diploma-head-n-doc-logo.svg";
 
+
 import react from "../assets/images/react-logo.svg";
 import reactHooks from "../assets/images/react-hooks-logo.svg";
 import redux from "../assets/images/redux-logo.svg";
-import english from "../assets/images/english-flag-logo.svg";
+// import english from "../assets/images/english-flag-logo.svg";
+import webpack from "../assets/images/webpack-logo.svg";
 import rssReact from "../assets/images/rss-react-logo.svg";
 import victory from "../assets/images/victory-logo.svg";
 import personal from "../assets/images/personal-development-logo.svg";
@@ -36,13 +38,19 @@ export default function MainAnimtion(){
   const [ studentVisability, setStudentVisability ] = useState(false);
   const [ studentImage, setStudentImage ] = useState(student);
 
+  const [ leftSputnikPermission, setLeftSputnikPermission ] = useState(false);
+  const [ rightSputnikPermission, setRightSputnikPermission ] = useState(false);
+
+
   const Student = () => {
     return(
       <div className="student" 
         style={{
           backgroundImage: `url(${studentImage})`
         }}
-      ></div>
+      >
+        {windowHeight}
+      </div>
     )
   };
 
@@ -50,18 +58,33 @@ export default function MainAnimtion(){
     return(
       <div className="main-animation_content-component">
         <div className="main-animation_content-component_left">
-          <SideText />
+          {leftSputnikPermission ? 
+            <SideText 
+            text={parameters.leftText}
+            id="left-sputnik"
+            />
+          : null}
         </div>
         <div className="main-animation_content-component_center">
           <div className="main-animation_content-component_center_container">
-            <img src={html}></img>
-            <img src={css}></img>
-            <img src={scss}></img>
-            <img src={webpack}></img>
+            <img className="skills-icon" src={parameters.firstIcon}></img>
+            <img className="skills-icon" src={parameters.secondIcon}></img>
+            <img className="skills-icon" src={parameters.thirdIcon}></img>
+            <img className="skills-icon" src={parameters.fourthIcon}></img>
+            <div className="main-animation_content-component_center_container_goal">
+              <img className="sputnik-icon" src={parameters.leftSputnik}></img>
+              <img className="goal" src={parameters.goal}></img>
+              <img className="sputnik-icon" src={parameters.rightSputnik}></img>
+            </div>
           </div>
         </div>
         <div className="main-animation_content-component_right">
-          <SideText />
+          {rightSputnikPermission ?
+            <SideText 
+              text={parameters.rightText}
+              id="right-sputnik"
+            />
+          : null}
         </div>
       </div>
     )
@@ -69,8 +92,8 @@ export default function MainAnimtion(){
 
   const SideText = (parameters) => {
     return(
-      <div className="main-animation_content-component_container">
-        <p>THERE SHOULD BE PASSED SOME TEXT</p>
+      <div className="side-text" id={parameters.id}>
+        <p>{parameters.text}</p>
       </div>
     )
   };
@@ -113,12 +136,45 @@ export default function MainAnimtion(){
 
   return(
     <div className="main-animation">
-      {windowHeight}
+      
 
       {studentVisability ? 
         <Student /> 
       : null}
-      <Content />
+
+      <Content 
+        firstIcon={html}
+        secondIcon={css}
+        thirdIcon={scss}
+        fourthIcon={js}
+        leftSputnik={diploma}
+        rightSputnik={diplomaNHat}
+        leftText="LEFT TEXT"
+        rightText="RIGHT TEXT"
+        goal={rss}
+      />
+      <Content 
+        firstIcon={react}
+        secondIcon={reactHooks}
+        thirdIcon={redux}
+        fourthIcon={webpack}
+        leftSputnik={victory}
+        rightSputnik={personal}
+        leftText="LEFT TEXT"
+        rightText="RIGHT TEXT"
+        goal={rssReact}
+      />
+      <Content 
+        firstIcon={jest}
+        secondIcon={german}
+        thirdIcon={figma}
+        fourthIcon={svg}
+        leftSputnik={specialist}
+        rightSputnik={reached}
+        leftText="LEFT TEXT"
+        rightText="RIGHT TEXT"
+        goal={junior}
+      />
     </div>
   )
 }
