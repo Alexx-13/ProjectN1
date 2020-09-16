@@ -1,0 +1,79 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.module-window{
+  width: 400px;
+  height: 300px;
+  color: $black;
+  background-color: $white;
+  border: solid $lightBlue 2px;
+  margin-top: $marginAlignGeneral;
+  padding: 0 $paddingJustifyGeneral;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-top: -20%;
+  margin-left: 70%;
+  position: sticky;
+  top: 80px;
+  font-family: $logoFont;
+  &_hard{
+    h3{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      button{
+        @include navBtnStyles;
+      }
+
+      button:hover{
+        @include hooverGeneralBtn;
+      }
+    }
+  }
+  &_hard, &_soft{
+    margin: $marginAlignGeneral 0;
+  }
+};
+
+.skills-slider{
+  @include flexSpaceBetweenHW;
+  height: 80px;
+  button{
+    @include correctBtn;
+    background-color: transparent;
+    height: 80px;
+    width: 80px;
+
+    img{
+      width: 40px;
+      height: 40px;
+      -webkit-transition: all $fastTransitionTime ease-in;
+      transition: all $fastTransitionTime ease-in;
+    }
+
+    img:hover{
+      width: 50px;
+      height: 50px;
+      -webkit-transition: all $fastTransitionTime ease-in;
+      transition: all $fastTransitionTime ease-in;
+    }
+  }
+};
+
+.activated-modal{
+  margin-top: 0%;
+  -webkit-animation: showFromTheTop $generalTransitionTime linear;
+  -moz-animation: showFromTheTop $generalTransitionTime linear;
+  -ms-animation: showFromTheTop $generalTransitionTime linear;
+  -o-animation: showFromTheTop $generalTransitionTime linear;
+  animation: showFromTheTop $generalTransitionTime linear;
+};
+
+@keyframes showFromTheTop {
+  0%{
+    margin-top: -20%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+};

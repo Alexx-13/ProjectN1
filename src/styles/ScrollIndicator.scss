@@ -1,0 +1,8 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.scroll-indicator{
+  @include flexStart;
+  height: 5px;
+  background-color: $lightBlue;
+}

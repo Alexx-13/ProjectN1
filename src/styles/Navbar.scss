@@ -1,15 +1,21 @@
 @import "../shared/mixins/mixins.scss";
 @import "../shared/variables/variables.scss";
 
-.navbar{
-  @include flexSpaceBetweenHW;
-  height: 70px;
-
-  background-color: $darkBlue;
+.header-block{
+  @include hundredHW;
+  display: flex;
+  flex-direction: column;
   position: -webkit-sticky;
   position: sticky;
-  box-shadow: 0 5px 0 $lightBlue;
+  z-index: $navBarZIndex;
+  height: 70px;
   top: 0;
+};
+
+.navbar{
+  @include flexSpaceBetweenHW;
+  background-color: $darkBlue;
+  z-index: $navBarZIndex;
   font-size: 20px;
   &_left{
     @include flexCenter;
@@ -40,6 +46,7 @@
           button{
             width: 50px;
           }
+
         }
       }
     }
@@ -51,6 +58,10 @@
         color: $darkBlue;
         background-color: $white;
       }
+
+      #main-lang-btn:hover{
+        @include hooverGeneralBtn;
+      }
     }
   }
   &_right{
@@ -61,6 +72,11 @@
         @include navBtnStyles;
         font-family: $logoFont;
       }
+
+      button:hover{
+        @include hooverGeneralBtn;
+      }
+
       .toggle {
         position: absolute;
         right: 120px;

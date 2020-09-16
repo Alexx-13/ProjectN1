@@ -4,66 +4,123 @@
 .main-animation{
   @include flexCenterHW;
   flex-direction: column;
-  transition: all .2s ease-in;
-  .student{
-    width: 250px;
-    height: 250px;
-    position: fixed;
-    bottom: 50%;
-    left: 20%;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &_content-component{
-    @include flexSpaceBetweenHW;
-    .side-text{
-      width: 300px;
-      height: 200px;
-      background-color: #fff;
-      border-radius: $borderRadius $borderRadius;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    &_center{
-      &_container{
-        @include flexSpaceBetweenHW;
-        flex-direction: column;
-        .skills-icon{
-          width: 200px;
-          height: 200px;
-        }
-        .skills-icon:hover{
-          background-color: #fff;
-          margin-left: 300px;
-        }
-        &_goal{
-          @include flexCenterHW;
-          .sputnik-icon{
-            width: 150px;
-            height: 150px;
+  &_container{
+    @include flexSpaceAroundHW;
+    flex-direction: column;
+    &_a, &_b, &_c{
+      @include flexCenterHW;
+      padding: 10% 0;
+
+      .text-block{
+        @include flexCenterHW;
+        &_container{
+          color: $black;
+          background-color: $white;
+          margin-top: $marginAlignGeneral;
+          padding: 0 $paddingJustifyGeneral;
+          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          border-radius: $borderRadius;
+
+          
+      
+          h2{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 70px;
+            a{
+              display: flex;
+              justify-content: flex-end;
+              img{
+                width: 50px;
+                height: 50px;
+                margin-right: $paddingJustifyGeneral;
+                -webkit-transition: all $fastTransitionTime ease-in;
+                transition: all $fastTransitionTime ease-in;
+              }
+            }
+
+            a:hover img{
+              width: 70px;
+              height: 70px;
+              -webkit-transition: all $fastTransitionTime ease-in;
+              transition: all $fastTransitionTime ease-in;
+            }
           }
-          .goal{
-            margin-top: 100px;
-            width: 300px;
-            height: 300px;
+          &_btn{
+            @include flexEnd;
+            margin: $marginAlignGeneral;
+
+            button{
+              @include navBtnStyles;
+              width: 30%;
+            }
+  
+            button:hover{
+              @include hooverGeneralBtn;
+            }
+          }
+        }
+      }
+
+      .circles-block{
+        @include flexCenterHW;
+        &_central-object{
+          border-radius: 50%;
+          img{
+            width: 30vw;
+            height: 30vw;
+          }
+        }
+        &_orbit{
+          width: 30vw;
+          height: 30vw;
+          border-radius: 50%;
+          position : absolute;
+          display: flex;
+          flex-direction: column;
+          -webkit-animation: spin-right 10s linear infinite;
+          -moz-animation: spin-right 10s linear infinite;
+          -ms-animation: spin-right 10s linear infinite;
+          -o-animation: spin-right 10s linear infinite;
+          animation: spin-right 10s linear infinite;
+          #orbit-group-b{
+            align-items: flex-end;
+          }
+          &_group{
+            @include hundredHW;
+            display: inline-flex;
+            justify-content: space-between;
+    
+            &_satellite{
+              justify-content: space-between;
+              img{
+                width: 8vw;
+                height: 8vw;
+              }
+            }
           }
         }
       }
     }
+    
   }
+
+
 };
 
-@keyframes skillsIcon{
-  25% {
-    border: green white solid
-  }
-  // 50% {
-  //   border: green, green, none, none solid
-  // }
-  // 75% {
-  //   border: green, green, green, none solid
-  // }
+@-webkit-keyframes spin-right {
   100% {
-    border: green, greensolid
+      -webkit-transform: rotate(360deg);
   }
-
+}
+@-moz-keyframes spin-right {
+  100% {
+      -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spin-right {
+  100% {
+      transform: rotate(360deg);
+  }
 }

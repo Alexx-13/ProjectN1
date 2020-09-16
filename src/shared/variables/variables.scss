@@ -9,6 +9,12 @@ $importantLogoSize: 70px;
 $unimportantLogoSize: 50px;
 /* */ 
 
+/* z-index */
+  $navBarZIndex: 60;
+  $moduleWindowZIndex: 50;
+
+/* */
+
 /* colors */
 $black: #050609;
 $white: #fdfdfd;
@@ -22,5 +28,7 @@ $logoFont: 'Oleo Script', cursive;
 /* */
 
 /* animation time */
+$fastTransitionTime: .10s;
 $generalTransitionTime: .35s;
+$smoothTransitionTime: 1s;
 /* */

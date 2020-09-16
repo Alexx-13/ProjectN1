@@ -1,0 +1,45 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.side-links{
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-right: 150%;
+  top: 30%;
+
+  img{
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    border: 2px solid $darkBlue;
+    border-radius: 50%;
+    -webkit-transition: all $fastTransitionTime ease-in;
+    transition: all $fastTransitionTime ease-in;
+  }
+
+  img:hover{
+    border-radius: 0%;
+    -webkit-transition: all $fastTransitionTime ease-in;
+    transition: all $fastTransitionTime ease-in;
+  }
+};
+
+.activated{
+  margin-right: 120%;
+  -webkit-animation: showFromTheSide $smoothTransitionTime linear;
+  -moz-animation: showFromTheSide $smoothTransitionTime linear;
+  -ms-animation: showFromTheSide $smoothTransitionTime linear;
+  -o-animation: showFromTheSide $smoothTransitionTime linear;
+  animation: showFromTheSide $smoothTransitionTime linear;
+};
+
+@keyframes showFromTheSide {
+  0%{
+    margin-right: 150%;
+  }
+  100%{
+    margin-right: 120%;
+  }
+};
