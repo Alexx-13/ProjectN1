@@ -5,6 +5,8 @@ import "../styles/ModuleWindow.scss";
 
 import arrowRight from "../assets/images/arrows/arrow-right.svg";
 import arrowLeft from "../assets/images/arrows/arrow-left.svg";
+import arrowRightGray from "../assets/images/arrows/arrow-right-gray.svg";
+import arrowLeftGray from "../assets/images/arrows/arrow-left-gray.svg";
 
 export default function ModuleWindow(props){
   const { t, i18n } = useTranslation();
@@ -12,24 +14,24 @@ export default function ModuleWindow(props){
   return(
     <div className="module-window activated-modal">
         <div className="module-window_hard">
-          <h3>Hard Skills
+          <h3>{t('ModuleWindowTitleA')}
             <button
               onClick={() => {props.updateShowModuleWindow(false)}}
             >X
             </button>
             </h3>
           <SkillsSlider 
-            textA="a1111111111111111"
-            textB="a2222222222222222"
-            textC="a3333333333333333"
+            textA={t('ModuleWindowATextA1')}
+            textB={t('ModuleWindowATextA2')}
+            textC={t('ModuleWindowATextA3')}
           />
         </div>
         <div className="module-window_soft">
-          <h3>Soft Skills</h3>
+          <h3>{t('ModuleWindowTitleB')}</h3>
           <SkillsSlider 
-            textA="b1111111111111111"
-            textB="b2222222222222222"
-            textC="b3333333333333333"
+            textA={t('ModuleWindowATextB1')}
+            textB={t('ModuleWindowATextB2')}
+            textC={t('ModuleWindowATextB3')}
           />
         </div>
     </div>
@@ -54,19 +56,26 @@ function SkillsSlider(parameters){
 
   return(
     <div className="skills-slider">
-      <button onClick={() => {decreaseIndex()}}><img src={arrowLeft}></img></button>
+      {index !== 0 ?
+        <button onClick={() => {decreaseIndex()}}><img src={arrowLeft} className="active-image" /></button>
+      : <img src={arrowLeftGray} className="unactive-image" />}
+  
       <div className="skills-slider_list">
         <SkillsList
           text={textArray[index]}
         />
       </div>
-      <button onClick={() => {increaseIndex()}}><img src={arrowRight}></img></button>
+
+      {index < 2 ?
+        <button onClick={() => {increaseIndex()}}><img src={arrowRight} className="active-image" /></button>
+      : <img src={arrowRightGray} className="unactive-image" />}
+
     </div>
   )
 };
 
 const SkillsList = (props) => {
   return(
-    <p>{props.text}</p>
+    <ul>{props.text}</ul>
   )
 };

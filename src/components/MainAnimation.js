@@ -24,15 +24,14 @@ import english from "../assets/images/english-flag-logo.svg";
 import elang from "../assets/images/elang-logo.svg";
 
 import senior from "../assets/images/senior-logo.svg";
+import myAvatart from "../assets/images/my-avatar.svg";
+import arrowDown from "../assets/images/arrows/arrow-down.svg";
 
 
 
 
 export default function MainAnimtion(){
   const { t, i18n } = useTranslation();
-  const [appearFirstBlock, setAppearFirstBlock] = useState(true);
-  const [appearSecondBlock, setAppearSecondBlock] = useState(true);
-  const [appearThirdBlock, setAppearThirdBlock] = useState(true);
 
   const [appearFirstSkills, setAppearFirstSkills] = useState(false);
   const [appearSecondSkills, setAppearSecondSkills] = useState(false);
@@ -45,7 +44,7 @@ export default function MainAnimtion(){
   return(
     <div className="main-animation">
       <div className="main-animation_container">
-        {appearFirstBlock ?
+      
           <div className="main-animation_container_a">
             <TextBlock 
               heading={t('AnimationHeadingA')}
@@ -56,6 +55,7 @@ export default function MainAnimtion(){
               paragraphC={t('AnimationBlockA3')}
               linkIcon={rss}
               link={rssLink}
+              nextDiv={document.querySelector(".main-animation_container_b")}
             />
             <CirclesBlock
               id="first-info-circles-block"
@@ -66,8 +66,8 @@ export default function MainAnimtion(){
               satelliteD={js}
             />
           </div>
-        :null}
-        {appearSecondBlock ? 
+   
+  
           <div className="main-animation_container_b">
             <TextBlock 
               heading={t('AnimationHeadingB')}
@@ -78,6 +78,7 @@ export default function MainAnimtion(){
               paragraphC={t('AnimationBlockB3')}
               linkIcon={rssReact}
               link={rssLinkReact}
+              nextDiv={document.querySelector(".main-animation_container_c")}
             />
             <CirclesBlock
               id="second-info-circles-block"
@@ -88,8 +89,8 @@ export default function MainAnimtion(){
               satelliteD={figma}
             />
           </div>
-        :null}
-        {appearThirdBlock ? 
+
+
           <div className="main-animation_container_c">
             <TextBlock 
               heading={t('AnimationHeadingC')}
@@ -100,6 +101,7 @@ export default function MainAnimtion(){
               paragraphC={t('AnimationBlockC3')}
               linkIcon={elang}
               link={elangLink}
+              nextDiv={document.querySelector(".main-animation_container_d")}
             />
             <CirclesBlock
               id="third-info-circles-block"
@@ -110,7 +112,15 @@ export default function MainAnimtion(){
               satelliteD={english}
             />
           </div>
-        :null}
+
+          <div className="main-animation_container_d">
+          <CirclesBlock
+              id="fourth-info-circles-block"
+              center={senior}
+            />
+            <img src={myAvatart} id="avatar"></img>
+          </div>
+
       </div>
     </div>
   )
@@ -149,6 +159,10 @@ const TextBlock = (parameters) => {
   const [appearSkills, setAppearSkills] = useState(parameters.descriptionAppear);
   const [btnText, setBtnText] = useState(true);
 
+  const scrollToADiv = (currentDiv) => {
+    currentDiv.scrollIntoView({block: "center", behavior: "smooth"});
+  }
+
   return(
     <div className="text-block">
         <div className="text-block_container">
@@ -175,7 +189,11 @@ const TextBlock = (parameters) => {
             </ul>
           : null}
         </div>
-
+        <button className="down-btn" onClick={() => {
+          scrollToADiv(parameters.nextDiv)
+        }}>
+          <img src={arrowDown} />
+        </button>
     </div>
   )
 };

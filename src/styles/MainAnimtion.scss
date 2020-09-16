@@ -13,6 +13,28 @@
 
       .text-block{
         @include flexCenterHW;
+        flex-direction: column;
+        .down-btn{
+          @include correctBtn;
+          background-color: transparent;
+          margin: $marginAlignGeneral;
+          img{
+            @include correctBtn;
+            height: 30px;
+            width: 70px;
+            -webkit-transition: all $fastTransitionTime ease-in;
+            transition: all $fastTransitionTime ease-in;
+          }
+
+          img:hover{
+            height: 50px;
+            width: 100px;
+            -webkit-transition: all $fastTransitionTime ease-in;
+            transition: all $fastTransitionTime ease-in;
+          }
+        }
+
+        
         &_container{
           color: $black;
           background-color: $white;
@@ -20,9 +42,6 @@
           padding: 0 $paddingJustifyGeneral;
           box-shadow: 0 0 10px rgba(0,0,0,0.5);
           border-radius: $borderRadius;
-
-          
-      
           h2{
             display: flex;
             justify-content: space-between;
@@ -103,11 +122,19 @@
         }
       }
     }
-    
+    &_d{
+      @include flexSpaceBetweenHW;
+      #avatar{
+        // margin-top: $marginAlignGeneral;
+        width: 300px;
+        height: 300px;
+        border-radius: 70%;
+        border: solid red 3px;
+      }
+    }
   }
-
-
 };
+
 
 @-webkit-keyframes spin-right {
   100% {
