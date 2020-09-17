@@ -1,0 +1,50 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+#section-a{
+  font-family: $logoFont;
+  padding-top: $paddingJustifyGeneral * 5;
+  padding-bottom: $paddingJustifyGeneral * 5;
+  background-image: url("https://imgproxy.natucate.com/PAd5WVIh-tjEKQM4Z6tm6W1J4Yc2JIYWrKEroD1c7mM/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlYXJ0ZW4vNmMwODZlYmEtNzk3Yi00ZDVjLTk2YTItODhhNGM4OWUyODdlLzM3NjYwMTQ2NjMtMTU2NzQzMzYxMi8xMl9kYW5pZWxfY2FuX2JjLTIwNy5qcGc");
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &_left{
+    @include flexCenterHW;
+    &_container{
+      @include flexEnd;
+      flex-direction: column;
+      text-align: end;
+      &_message-first, &_message-second{
+        color: $black;
+        background-color: $white;
+        border-radius: $borderRadius $borderRadius 0 $borderRadius;
+        margin-top: $marginAlignGeneral;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        max-width: 70%;
+        h3{
+          margin-bottom: 0;
+        }
+        h3, h4{
+          padding: 0 $paddingJustifyGeneral;
+        }
+      }
+    }
+  }
+  &_right{
+    @include flexStart;
+    @include hundredHW;
+    padding-left: $paddingJustifyGeneral * 3;
+    img{
+      margin-top: $marginAlignGeneral;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
+  }
+};

@@ -22,10 +22,12 @@
     &_logo{
       padding-left: $paddingJustifyGeneral;
       h2{
+        @include correctBtn;
         font-size: $logoFontSize;
         font-family: $logoFont;
         color: $white;
         margin: 0;
+        scroll-behavior: smooth;
       }
     }
     &_lang{
@@ -59,7 +61,7 @@
         background-color: $white;
       }
 
-      #main-lang-btn:hover{
+      #main-lang-btn::hover{
         @include hooverGeneralBtn;
       }
     }

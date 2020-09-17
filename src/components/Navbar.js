@@ -30,6 +30,10 @@ export default function Navbar(props){
     )
   };
 
+  const scrollToATop = () => {
+    document.querySelector("#section-a").scrollIntoView({block: "center", behavior: "smooth"});
+  };
+
   return(
     <div className="header-block">
 
@@ -37,7 +41,13 @@ export default function Navbar(props){
         
         <div className="navbar_left">
           <div className="navbar_left_logo">
-            <h2>{t('NavbarLogoName')}</h2>
+            <h2
+              onClick={() => {
+                scrollToATop()
+              }}
+            >
+              {t('NavbarLogoName')}
+            </h2>
           </div>
 
           <div className="navbar_left_lang"

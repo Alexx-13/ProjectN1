@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from 'react-i18next';
+import FlyAnimation from "./FlyAnimation";
 
 import "../styles/MainAnimtion.scss";
 
@@ -66,6 +67,7 @@ export default function MainAnimtion(){
               satelliteD={js}
             />
           </div>
+          <FlyAnimation />
    
   
           <div className="main-animation_container_b">
@@ -89,7 +91,7 @@ export default function MainAnimtion(){
               satelliteD={figma}
             />
           </div>
-
+          <FlyAnimation />
 
           <div className="main-animation_container_c">
             <TextBlock 
@@ -112,13 +114,13 @@ export default function MainAnimtion(){
               satelliteD={english}
             />
           </div>
+          <FlyAnimation />
 
           <div className="main-animation_container_d">
           <CirclesBlock
               id="fourth-info-circles-block"
               center={senior}
             />
-            <img src={myAvatart} id="avatar"></img>
           </div>
 
       </div>

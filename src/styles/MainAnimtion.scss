@@ -7,11 +7,14 @@
   &_container{
     @include flexSpaceAroundHW;
     flex-direction: column;
+
     &_a, &_b, &_c{
       @include flexCenterHW;
       padding: 10% 0;
 
       .text-block{
+        position: relative;
+        z-index: 50;
         @include flexCenterHW;
         flex-direction: column;
         .down-btn{
@@ -84,6 +87,8 @@
 
       .circles-block{
         @include flexCenterHW;
+        position: relative;
+        z-index: 50;
         &_central-object{
           border-radius: 50%;
           img{

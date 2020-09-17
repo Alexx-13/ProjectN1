@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   position: -webkit-sticky;
-  position: sticky;
-  margin-right: 150%;
+  position: fixed;
+  right: 100%;
   top: 30%;
 
   img{
@@ -27,7 +27,7 @@
 };
 
 .activated{
-  margin-right: 120%;
+  right: 95%;
   -webkit-animation: showFromTheSide $smoothTransitionTime linear;
   -moz-animation: showFromTheSide $smoothTransitionTime linear;
   -ms-animation: showFromTheSide $smoothTransitionTime linear;
@@ -37,9 +37,9 @@
 
 @keyframes showFromTheSide {
   0%{
-    margin-right: 150%;
+    right: 100%;
   }
   100%{
-    margin-right: 120%;
+    right: 95%;
   }
 };

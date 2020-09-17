@@ -5,7 +5,7 @@
 
   "ModuleWindowTitleA": "Main hard skills",
   "ModuleWindowATextA1": "HTML, CSS/SCSS, JS",
-  "ModuleWindowATextA2": "React+Redux, ReactHooks",
+  "ModuleWindowATextA2": "React+Redux, ReactHooks, GitHub",
   "ModuleWindowATextA3": "Webpack, JestTests, SVGAnimations",
 
   "ModuleWindowTitleB": "Main soft skills",
