@@ -6,7 +6,6 @@ import MainAnimtion from "./MainAnimation";
 import SideLinks from "./SideLinks";
 
 import "../styles/Main.scss";
-import myAvatart from "../assets/images/my-avatar.svg";
 
 export default function Main(){
   const { t, i18n } = useTranslation();
@@ -37,7 +36,8 @@ export default function Main(){
         <SideLinks />
       : null}
       <div className="main_section" id="section-b">
-        <h1>{t('MainHeading')}</h1>
+        <h1>{t('MainHeadingA')}<br />{t('MainHeadingB')}</h1>
+
         <MainAnimtion />
 
       </div>

@@ -5,12 +5,20 @@
 html,body{
   @include pureDiv;
   @include hundredHW;
-  // overflow-x:hidden;
 };
 
 .App{
   @include flexCenterHW;
   flex-direction: column;
+
+  .pre-App{
+    @include flexCenterHW;
+    flex-direction: column;
+  }
+
+  img{
+    user-select: none;   
+  }
   &_container{
     width: $mainContainerWidth;
   }

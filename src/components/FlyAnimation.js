@@ -27,17 +27,16 @@ export default function FlyAnimation(){
 };
 
 const AnimationFigure = () => {
-  // const circleAnimation = (e) => {
-  //   console.log(e.target)
-  //   e.target.classList.add("animated-figure")
-  //   console.log(e.target)
+  // const disappearOnClick = (e) => {
+  //   console.log(e)
+  //   e.target.classList.add("disappear-circle")
   // };
-
+  
   return(
     <li 
-    //   onClick={(e) => {
-    //   circleAnimation(e)
-    // }} 
+      // onClick={(e) => {
+      //   disappearOnClick(e)
+      // }}
     />
   )
 };

@@ -19,12 +19,18 @@
       animation: animate 5s linear infinite;
       background-color: whitesmoke;
       transition: 500ms ease-in-out;
-      // border: solid $lightBlue 2px;
-      
     }
+
+        
+    // .disappear-circle{
+    //   transition: all 0.4s ease 0s;
+    //   border-radius: 70%;
+    // }
+
     li:hover{
       background-color: $lightBlue;
       transition: 300ms ease-in-out;
+      animation-play-state: paused;
     }
 
     li:nth-child(1){
@@ -96,48 +102,48 @@
     
     li:nth-child(10){
       left: 75%;
-      width: 50px;
-      height: 50px;
+      width: 3vw;
+      height: 3vw;
       animation-delay: 0s;
       animation-duration: 11s;
     }
     
     li:nth-child(11){
       left: 55%;
-      width: 120px;
-      height: 120px;
+      width: 3vw;
+      height: 3vw;
       animation-delay: 0s;
       animation-duration: 7s;
     }
     
     li:nth-child(12){
       left: 15%;
-      width: 100px;
-      height: 100px;
+      width: 3vw;
+      height: 3vw;
       animation-delay: 0s;
       animation-duration: 6s;
     }
     
     li:nth-child(13){
       left: 82%;
-      width: 150px;
-      height: 150px;
+      width: 3vw;
+      height: 3vw;
       animation-delay: 0s;
       animation-duration: 14s;
     }
     
     li:nth-child(14){
       left: 65%;
-      width: 150px;
-      height: 150px;
+      width: 3vw;
+      height: 3vw;
       animation-delay: 0s;
       animation-duration: 5s;
     }
     
     li:nth-child(15){
       left: 65%;
-      width: 150px;
-      height: 150px;
+      width: 3vw;
+      height: 3vw;
       animation-delay: 0s;
       animation-duration: 2s;
     }

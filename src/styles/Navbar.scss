@@ -14,7 +14,7 @@
 
 .navbar{
   @include flexSpaceBetweenHW;
-  background-color: $darkBlue;
+  background-color: $black;
   z-index: $navBarZIndex;
   font-size: 20px;
   &_left{

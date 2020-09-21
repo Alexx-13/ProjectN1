@@ -1,0 +1,10 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.simple-chat-bot{
+  position: -webkit-sticky;
+  position: fixed;
+  z-index: $chatBotZIndex;
+  top: 10%;
+  left: 70%;
+};

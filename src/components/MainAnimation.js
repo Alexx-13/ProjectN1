@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import FlyAnimation from "./FlyAnimation";
 
@@ -24,8 +24,6 @@ import english from "../assets/images/english-flag-logo.svg";
 
 import elang from "../assets/images/elang-logo.svg";
 
-import senior from "../assets/images/senior-logo.svg";
-import myAvatart from "../assets/images/my-avatar.svg";
 import arrowDown from "../assets/images/arrows/arrow-down.svg";
 
 
@@ -45,83 +43,82 @@ export default function MainAnimtion(){
   return(
     <div className="main-animation">
       <div className="main-animation_container">
-      
-          <div className="main-animation_container_a">
-            <TextBlock 
-              heading={t('AnimationHeadingA')}
-              text={t('AnimationParagraphA')}
-              descriptionAppear={appearFirstSkills}
-              paragraphA={t('AnimationBlockA1')}
-              paragraphB={t('AnimationBlockA2')}
-              paragraphC={t('AnimationBlockA3')}
-              linkIcon={rss}
-              link={rssLink}
-              nextDiv={document.querySelector(".main-animation_container_b")}
-            />
-            <CirclesBlock
-              id="first-info-circles-block"
-              center={rss}
-              satelliteA={html}
-              satelliteB={css}
-              satelliteC={scss}
-              satelliteD={js}
-            />
-          </div>
-          <FlyAnimation />
-   
-  
-          <div className="main-animation_container_b">
-            <TextBlock 
-              heading={t('AnimationHeadingB')}
-              text={t('AnimationParagraphB')}
-              descriptionAppear={appearSecondSkills}
-              paragraphA={t('AnimationBlockB1')}
-              paragraphB={t('AnimationBlockB2')}
-              paragraphC={t('AnimationBlockB3')}
-              linkIcon={rssReact}
-              link={rssLinkReact}
-              nextDiv={document.querySelector(".main-animation_container_c")}
-            />
-            <CirclesBlock
-              id="second-info-circles-block"
-              center={rssReact}
-              satelliteA={react}
-              satelliteB={reactHooks}
-              satelliteC={reactRedux}
-              satelliteD={figma}
-            />
-          </div>
-          <FlyAnimation />
+        
+        <div className="main-animation_container_head">
+          <div className="main-animation_container_head_left" />
+          <h2><i>{t('MainSection')}</i></h2>
+          <div className="main-animation_container_head_right" />
+        </div>
 
-          <div className="main-animation_container_c">
-            <TextBlock 
-              heading={t('AnimationHeadingC')}
-              text={t('AnimationParagraphC')}
-              descriptionAppear={appearThirdSkills}
-              paragraphA={t('AnimationBlockC1')}
-              paragraphB={t('AnimationBlockC2')}
-              paragraphC={t('AnimationBlockC3')}
-              linkIcon={elang}
-              link={elangLink}
-              nextDiv={document.querySelector(".main-animation_container_d")}
-            />
-            <CirclesBlock
-              id="third-info-circles-block"
-              center={junior}
-              satelliteA={webpack}
-              satelliteB={jest}
-              satelliteC={svg}
-              satelliteD={english}
-            />
-          </div>
-          <FlyAnimation />
-
-          <div className="main-animation_container_d">
+        <div className="main-animation_container_a">
+          <TextBlock 
+            heading={t('AnimationHeadingA')}
+            text={t('AnimationParagraphA')}
+            descriptionAppear={appearFirstSkills}
+            paragraphA={t('AnimationBlockA1')}
+            paragraphB={t('AnimationBlockA2')}
+            paragraphC={t('AnimationBlockA3')}
+            linkIcon={rss}
+            link={rssLink}
+            nextDiv={document.querySelector(".main-animation_container_b")}
+          />
           <CirclesBlock
-              id="fourth-info-circles-block"
-              center={senior}
-            />
-          </div>
+            id="first-info-circles-block"
+            center={rss}
+            satelliteA={html}
+            satelliteB={css}
+            satelliteC={scss}
+            satelliteD={js}
+          />
+        </div>
+        <FlyAnimation />
+  
+
+        <div className="main-animation_container_b">
+          <TextBlock 
+            heading={t('AnimationHeadingB')}
+            text={t('AnimationParagraphB')}
+            descriptionAppear={appearSecondSkills}
+            paragraphA={t('AnimationBlockB1')}
+            paragraphB={t('AnimationBlockB2')}
+            paragraphC={t('AnimationBlockB3')}
+            linkIcon={rssReact}
+            link={rssLinkReact}
+            nextDiv={document.querySelector(".main-animation_container_c")}
+          />
+          <CirclesBlock
+            id="second-info-circles-block"
+            center={rssReact}
+            satelliteA={react}
+            satelliteB={reactHooks}
+            satelliteC={reactRedux}
+            satelliteD={figma}
+          />
+        </div>
+        <FlyAnimation />
+
+        <div className="main-animation_container_c">
+          <TextBlock 
+            heading={t('AnimationHeadingC')}
+            text={t('AnimationParagraphC')}
+            descriptionAppear={appearThirdSkills}
+            paragraphA={t('AnimationBlockC1')}
+            paragraphB={t('AnimationBlockC2')}
+            paragraphC={t('AnimationBlockC3')}
+            linkIcon={elang}
+            link={elangLink}
+            nextDiv={document.querySelector(".footer")}
+          />
+          <CirclesBlock
+            id="third-info-circles-block"
+            center={junior}
+            satelliteA={webpack}
+            satelliteB={jest}
+            satelliteC={svg}
+            satelliteD={english}
+          />
+        </div>
+        <FlyAnimation />
 
       </div>
     </div>

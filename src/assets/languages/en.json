@@ -1,6 +1,6 @@
 {  "paragraph": "english text",
 
-  "NavbarLogoName": "Portfolio",
+  "NavbarLogoName": "VisitC",
   "NavbarExamples": "Skills",
 
   "ModuleWindowTitleA": "Main hard skills",
@@ -16,7 +16,10 @@
   "MainGreetings": "Hello!",
   "MainParagraphA": "My name is Aliaksei Kernoha, or just Alex. I am a Belarusian junior front-end web ingenieur, with passion for what I do.",
   "MainParagraphB": "This project is a representation of my way and plans.",
-  "MainHeading": "Samurai has no goal, there is only a way. But I have both of them",
+  "MainHeadingA": "Samurai has no goal, there is only a way.",
+  "MainHeadingB": " But I have both of them",
+
+  "MainSection": "The Way",
 
   "AnimationHeadingA": "JS Rolling Scopes School",
   "AnimationParagraphA": "After a period of digging in myself, I decided to start a carrier of Web Developer. Thanks to the RSS, the belarusian team of non-commerce developers; an opportunity to study with interesting and unusual tasks was given to me. During the standart course, I became acquanted with HTML, CSS, JS in general, also I performed practical tasks which are available.",
@@ -37,6 +40,11 @@
 
   "AnimationBlockC1": "Webpack - self-made bundle, understanding of the proccess",
   "AnimationBlockC2": "Jest Tests - basics and couverage of code with tests",
-  "AnimationBlockC3": "SVG animation - understanding and practical skills"
+  "AnimationBlockC3": "SVG animation - understanding and practical skills",
+
+  "FooterSection": "The Goal",
+
+  "FooterGoalA": "A goal was set",
+  "FooterGoalB": "The goal will be achieved"
 
 }
