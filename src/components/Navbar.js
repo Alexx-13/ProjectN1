@@ -5,34 +5,38 @@ import ModuleWindow from "./ModuleWindow";
 
 import '../styles/Navbar.scss';
 
+import englishFlag from "../assets/images/english-flag-logo.svg";
+import russianFlag from "../assets/images/russian-flag-logo.svg";
+
 export default function Navbar(props){
   const { t, i18n } = useTranslation();
-  const [showDropDown, setShowDropDown] = useState(false);
+  const [logoContentA, setLogoContentA] = useState("Vi");
+  const [logoContentB, setLogoContentB] = useState("sitC")
   const [switchLanguage, setSwitchLanguage] = useState("English");
   const [showModuleWindow, setShowModuleWindow] = useState(false);
+  const [switcherFlag, setSwitcherFlag] = useState(true);
 
   const changeLanguage = lng => {
     i18n.changeLanguage(lng);
   };
 
-  const LangBtn = (props) => {
-    return(
-      <button
-        className="langBtn"
-        onClick={() => {
-          changeLanguage(props.language);
-          setSwitchLanguage(props.fullName);
-          setShowDropDown(false);
-        }}
-      >
-        {props.language}
-      </button>
-    )
-  };
-
   const scrollToATop = () => {
     document.querySelector("#section-a").scrollIntoView({block: "center", behavior: "smooth"});
   };
+
+  const changeFlag = () => {
+    if(switcherFlag === true){
+      document.querySelector(".switch").style.backgroundImage = `url(${englishFlag})`;
+      changeLanguage("EN")
+    } else if (switcherFlag === false){
+      document.querySelector(".switch").style.backgroundImage = `url(${russianFlag})`;
+      changeLanguage("RU")
+    }
+  }
+
+  useEffect(() => {
+    changeFlag()
+  }, [switcherFlag])
 
   return(
     <div className="header-block">
@@ -45,42 +49,25 @@ export default function Navbar(props){
               onClick={() => {
                 scrollToATop()
               }}
+              onMouseEnter={() => {
+                setLogoContentA("CV")
+                setLogoContentB("isit")
+              }}
+              onMouseLeave={() => {
+                setLogoContentA("Vi")
+                setLogoContentB("sitC")
+              }}
             >
-              {t('NavbarLogoName')}
+              <i>{logoContentA}</i>{logoContentB}
             </h2>
           </div>
 
-          <div className="navbar_left_lang"
-            onMouseEnter={() => {
-              setShowDropDown(true);
-            }}
-            onMouseLeave={() => {setShowDropDown(false)}}
-          >
-            <button
-              id="main-lang-btn"
-              onClick={() => {setShowDropDown(!showDropDown)}}
-            >
-              {switchLanguage}
-            </button>
-            {showDropDown && switchLanguage === "English" ?
-              <ul>
-                <li>
-                  <LangBtn 
-                    language="RU" 
-                    fullName="Русский"
-                  />
-                </li>
-              </ul>      
-            : showDropDown && switchLanguage === "Русский"  ? 
-            <ul>
-                <li>
-                  <LangBtn 
-                    language="EN" 
-                    fullName="English"
-                  />
-                </li> 
-              </ul>     
-            : null}
+          <div className="toggle">
+            <input type="checkbox" className="check" onClick={() => {
+                setSwitcherFlag(!switcherFlag)
+            }}/>
+            <b className="b switch" />
+            <b className="b track" />
           </div>
         </div>
         
@@ -91,11 +78,6 @@ export default function Navbar(props){
             }}>
               {t('NavbarExamples')}
             </button>
-            <div className="toggle">
-              <input type="checkbox" className="check" />
-              <b className="b switch"></b>
-              <b className="b track"></b>
-            </div>
           </div>
         </div>
 

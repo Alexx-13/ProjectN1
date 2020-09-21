@@ -6,8 +6,9 @@
   flex-direction: column;
   position: -webkit-sticky;
   position: fixed;
-  right: 100%;
+  left: -40px;
   top: 30%;
+  z-index: 51;
 
   img{
     width: 60px;
@@ -29,7 +30,7 @@
 };
 
 .activated{
-  right: 95%;
+  left: 10px;
   -webkit-animation: showFromTheSide $smoothTransitionTime linear;
   -moz-animation: showFromTheSide $smoothTransitionTime linear;
   -ms-animation: showFromTheSide $smoothTransitionTime linear;
@@ -39,9 +40,18 @@
 
 @keyframes showFromTheSide {
   0%{
-    right: 100%;
+    left: -40px;
   }
   100%{
-    right: 95%;
+    left: 10px;
   }
 };
+
+@media screen and (max-width: 1024px){
+  .side-links{
+    img{
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

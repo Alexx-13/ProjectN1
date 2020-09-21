@@ -2,8 +2,8 @@
 @import "../shared/variables/variables.scss";
 
 .module-window{
-  width: 400px;
-  height: 300px;
+  width: 30vw;
+  height: 30vw;
   color: $black;
   background-color: $white;
   border: solid $lightBlue 2px;
@@ -12,7 +12,7 @@
   padding: 0 $paddingJustifyGeneral;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   margin-top: -20%;
-  margin-left: 70%;
+  margin-left: 65%;
   position: sticky;
   top: 80px;
   font-family: $logoFont;
@@ -24,6 +24,8 @@
 
       button{
         @include navBtnStyles;
+        height: 3vw;
+        width: 8vw;
       }
 
       button:hover{
@@ -42,6 +44,8 @@
   height: 80px;
   &_list{
     @include flexCenterHW;
+    font-size: 1.2vw;
+    user-select: none;
   }
   button{
     @include correctBtn;
@@ -51,8 +55,8 @@
   }
 
   img{
-    width: 40px;
-    height: 40px;
+    width: 5vw;
+    height: 5vw;
   }
 
   .active-image{
@@ -83,5 +87,62 @@
   }
   100%{
     margin-top: 0%;
+  }
+};
+
+@keyframes showFromTheTopM {
+  0%{
+    margin-top: -20%;
+  }
+  100%{
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .module-window{
+    height: 400px;
+    width: 50%;
+    margin-left: 40%;
+    .skills-slider{
+      @include flexSpaceBetweenHW;
+      height: 80px;
+      &_list{
+        @include flexCenterHW;
+        font-size: 3vw;
+        user-select: none;
+      }
+    }
+  }
+};
+
+@media screen and (max-width: 520px){
+  .activated-modal{
+    margin-top: 10%;
+    -webkit-animation: showFromTheTopM $generalTransitionTime linear;
+    -moz-animation: showFromTheTopM $generalTransitionTime linear;
+    -ms-animation: showFromTheTopM $generalTransitionTime linear;
+    -o-animation: showFromTheTopM $generalTransitionTime linear;
+    animation: showFromTheTopM $generalTransitionTime linear;
+  };
+
+  .module-window{
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 70vw;
+    
+    ul{
+      padding: 0;
+    }
+    
+    &_hard{
+      h3{
+        button{
+          @include navBtnStyles;
+          height: 7vw;
+          width: 15vw;
+        }
+      }
+    }
   }
 };

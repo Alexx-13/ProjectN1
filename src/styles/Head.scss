@@ -7,7 +7,6 @@
   font-family: $logoFont;
   padding-top: $paddingJustifyGeneral * 5;
   padding-bottom: $paddingJustifyGeneral * 5;
-  // background-image: url("https://wallpaperset.com/w/full/6/5/9/20735.jpg");
   background-image: url("https://www.droptica.com/sites/droptica.com/files/media/image/dark%20background.jpg"); //
   height: 100%;
   box-shadow: 0px 0px 70px 0px rgba(0,0,0,0.57);
@@ -17,38 +16,47 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  &_left{
+  &_right{
     @include flexCenterHW;
     &_container{
-      @include flexEnd;
+      @include flexStart;
       flex-direction: column;
       text-align: end;
       &_message-first, &_message-second{
         color: $black;
         background-color: $white;
-        border-radius: $borderRadius $borderRadius 0 $borderRadius;
+        border-radius: $borderRadius $borderRadius $borderRadius 0;
         margin-top: $marginAlignGeneral;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
         max-width: 70%;
-        h3{
-          margin-bottom: 0;
-        }
+        border-left: 5px solid $lightBlue;
+        border-top: 5px solid $lightBlue;
         h3, h4{
           padding: 0 $paddingJustifyGeneral;
+          font-size: 1.5vw;
         }
+        h3{
+          margin-bottom: 0;
+          font-size: 2vw;
+          text-decoration: underline;
+          text-decoration-color: $lightBlue;
+          text-decoration-style: wavy;
+        }
+
       }
     }
   }
-  &_right{
-    @include flexStart;
+  &_left{
+    @include flexEnd;
     @include hundredHW;
-    padding-left: $paddingJustifyGeneral * 3;
+    padding-right: $paddingJustifyGeneral * 3;
     img{
       margin-top: $marginAlignGeneral;
-      width: 300px;
-      height: 300px;
+      width: 30vw;
+      height: 30vw;
       border-radius: 50%;
-      border: solid $white 5px;
+      border: 5px solid $lightBlue;
+      border-right: none;
     }
   }
 };
@@ -58,12 +66,19 @@
 };
 
 #finger-img{
+  width: 7vw;
+  border: 5px solid $lightBlue;
+  border-bottom: none;
   background-color: #fff;
   border-radius: 70%;
-  padding: 5px;
+  padding: 1px;
   animation: upAndDown 1s linear infinite;
   cursor: pointer;
 };
+
+#finger-img:hover{
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 1);;
+}
 
 @keyframes upAndDown{
   0%{
@@ -80,5 +95,45 @@
   }
   100%{
     transform: translateY(20px);
+  }
+};
+
+@media screen and (max-width: 1024px){
+  
+#section-a{
+  padding-top: $paddingJustifyGeneral;
+  &_right{
+
+    &_container{
+      @include flexCenterHW;
+      &_message-first, &_message-second{
+        border-radius: $borderRadius 0 $borderRadius 0;
+        h3{
+          text-align: center;
+          font-size: 3.5vw;
+        }
+        h4{
+          text-align: center;
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+  &_left{
+    @include flexCenterHW;
+    @include pureDiv;
+    img{
+      @include pureDiv;
+      width: 40vw;
+      height: 40vw;
+      border: 5px solid $lightBlue;
+      border-left: none;
+      border-right: none;
+    }
+  }
+};
+
+  .extra-div{
+    flex-direction: column;
   }
 };

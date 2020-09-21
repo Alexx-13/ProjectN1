@@ -7,7 +7,8 @@
   position: fixed;
   z-index: 60;
   background: black;
-  animation: disappearPreloader 4s forwards;
+  animation: disappearPreloader 1s forwards;
+  animation-delay: 2s;
 
   &_circle{
     width: 10vw;
@@ -18,7 +19,7 @@
     border-radius: 50%;
     animation: spin 2s linear infinite;
   }
-}
+};
 
 @keyframes spin {
   0% { 
@@ -27,7 +28,7 @@
   100% { 
     transform: rotate(360deg); 
   }
-}
+};
 
 @keyframes disappearPreloader{
   0%{
@@ -43,4 +44,4 @@
     transform: translateY(100vh);
     display: none;
   }
-}
+};

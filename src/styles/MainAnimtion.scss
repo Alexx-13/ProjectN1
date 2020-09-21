@@ -14,16 +14,15 @@
         border-bottom: 7px solid $lightBlue;
       }
       &_right{
-        width: 10vw;
+        width: 30%;
       }
       h2{
         @include pureDiv;
         color: $black;
-        font-size: 54px;
+        font-size: $h1FontSize;
         text-align: center;
       }
     }
-
     &_a, &_b, &_c{
       display: flex;
       padding: 10% 0;
@@ -32,6 +31,8 @@
         position: relative;
         z-index: 50;
         @include flexCenterHW;
+        width: 50vw;
+        padding-left: 5vw;
         flex-direction: column;
         .down-btn{
           @include correctBtn;
@@ -76,7 +77,6 @@
                 margin-right: $paddingJustifyGeneral;
                 -webkit-transition: all $fastTransitionTime ease-in;
                 transition: all $fastTransitionTime ease-in;
-                // animation: moveAroundCircle 2s linear infinite;
                 box-shadow: inset 0 0 5px 5px rgba(39, 168, 228, 0.5);
                 padding: 2px;
                 border-radius: 70%;
@@ -101,7 +101,8 @@
               font-family: $logoFont;
               transition: all $generalTransitionTime ease-in;
               box-shadow: 0 0 10px rgba(83, 67, 67, 0.5);
-              width: 30%;
+              width: 10vw;
+              height: 3em;
             }
   
             button:hover{
@@ -164,7 +165,6 @@
         width: 300px;
         height: 300px;
         border-radius: 70%;
-        border: solid red 3px;
       }
     }
   }
@@ -187,44 +187,53 @@
   }
 };
 
-// @keyframes moveAroundCircle {
-//   0%{
-//     border-top: solid 5px $white;
-//     border-right: solid 5px $white;
-//     border-bottom: solid 5px $white;
-//     border-left: solid 5px $black;
-//   }
-//   25% {
-//     border-top: solid 5px $black;
-//     border-right: solid 5px $white;
-//     border-bottom: solid 5px $white;
-//     border-left: solid 5px $white;
-//   }
-//   50% {
-//     border-top: solid 5px $white;
-//     border-right: solid 5px $black;
-//     border-bottom: solid 5px $white;
-//     border-left: solid 5px $white;
-//   }
-//   75%{
-//     border-top: solid 5px $white;
-//     border-right: solid 5px $white;
-//     border-bottom: solid 5px $black;
-//     border-left: solid 5px $white;
-//   }
-//   100%{
-//     border-top: solid 5px $white;
-//     border-right: solid 5px $white;
-//     border-bottom: solid 5px $white;
-//     border-left: solid 5px $black;
-//   }
-// };
-
 @keyframes stopAroundCircle{
   0%{
     border: solid 5px $lightBlue;
   }
   100%{
     border: solid 5px $lightBlue;
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  .main-animation{
+    &_container{
+      &_a, &_b, &_c{
+        flex-direction: column;
+        .text-block{
+          width: 80vw;
+          padding-left: 0;
+          &_container_btn{
+            button{
+              width: 20vw;
+              height: 3em;
+            }
+          }
+        }
+        .circles-block{
+          border-radius: 50px;
+        }
+      }
+      &_a{
+        .circles-block{
+          background-color: $white;
+          border: 5px solid $black;
+        }
+      }
+      &_b{
+        .circles-block{
+          background-color: $lightBlue;
+          border: 5px solid $black;
+        }
+      }
+      &_c{
+        .circles-block{
+          background-color: $black;
+          border: 5px solid $lightBlue;
+        }
+      }
+    }
   }
 }

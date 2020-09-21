@@ -1,6 +1,5 @@
 {  "paragraph": "english text",
 
-  "NavbarLogoName": "VisitC",
   "NavbarExamples": "Skills",
 
   "ModuleWindowTitleA": "Main hard skills",
@@ -14,19 +13,19 @@
   "ModuleWindowATextB3": "Sense of purpose, Sence of humor",
 
   "MainGreetings": "Hello!",
-  "MainParagraphA": "My name is Aliaksei Kernoha, or just Alex. I am a Belarusian junior front-end web ingenieur, with passion for what I do.",
+  "MainParagraphA": "My name is Aliaksei Kernoha, or just Alex. I am a Belarusian junior front-end web-developer, with passion for what I do.",
   "MainParagraphB": "This project is a representation of my way and plans.",
   "MainHeadingA": "Samurai has no goal, there is only a way.",
-  "MainHeadingB": " But I have both of them",
+  "MainHeadingB": "But I have both of them",
 
   "MainSection": "The Way",
 
   "AnimationHeadingA": "JS Rolling Scopes School",
-  "AnimationParagraphA": "After a period of digging in myself, I decided to start a carrier of Web Developer. Thanks to the RSS, the belarusian team of non-commerce developers; an opportunity to study with interesting and unusual tasks was given to me. During the standart course, I became acquanted with HTML, CSS, JS in general, also I performed practical tasks which are available.",
+  "AnimationParagraphA": "After a period of digging in myself, I decided to start a carrier of Web Developer. Thanks to the RSS, the belarusian team of non-commerce activists-developers, an opportunity to study with interesting and unusual tasks was given to me. During the standart course, I became acquanted with HTML, CSS, JS in general, also I performed practical tasks which are available.",
   "AnimationHeadingB": "React Rolling Scopes School",
-  "AnimationParagraphB": "In order to become a successfull front-end web developer, you just have to be familiar with one of 3 biggest whales: React, Angular or Vue. I decided to pick a React by many reasons, nevertheless this course gave me basics of react + redux.",
+  "AnimationParagraphB": "In order to become a successfull front-end web-developer, you just have to be familiar with one of 3 biggest whales of the sphere: React, Angular or Vue. I decided to pick a React by many reasons, nevertheless this course gave me basics of react + redux.",
   "AnimationHeadingC": "First Job offer",
-  "AnimationParagraphC": "After succefull study time at the courses, I have spent a lot of time to put all this knowledges together, to systemize them. I made hard work to make everything clear, to finally reatch such themes like Webpack, Jest Tests and other must-have technologies.",
+  "AnimationParagraphC": "After succefull study time at the courses, I have spent a lot of time to put all this knowledges together, to systemize them. I made hard work to make everything clear, to finally reatch such themes like: Webpack, Jest Tests and other must-have technologies.",
   "AnimationBtnUnactive": "Show detailes",
   "AnimationBtnActive": "Hide detailes",
 

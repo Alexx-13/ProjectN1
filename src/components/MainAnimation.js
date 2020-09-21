@@ -51,6 +51,16 @@ export default function MainAnimtion(){
         </div>
 
         <div className="main-animation_container_a">
+          <a href={rssLink} target="_blank">
+            <CirclesBlock
+              id="first-info-circles-block"
+              center={rss}
+              satelliteA={html}
+              satelliteB={css}
+              satelliteC={scss}
+              satelliteD={js}
+            />
+          </a>
           <TextBlock 
             heading={t('AnimationHeadingA')}
             text={t('AnimationParagraphA')}
@@ -62,19 +72,21 @@ export default function MainAnimtion(){
             link={rssLink}
             nextDiv={document.querySelector(".main-animation_container_b")}
           />
-          <CirclesBlock
-            id="first-info-circles-block"
-            center={rss}
-            satelliteA={html}
-            satelliteB={css}
-            satelliteC={scss}
-            satelliteD={js}
-          />
         </div>
         <FlyAnimation />
   
 
         <div className="main-animation_container_b">
+          <a href={rssLinkReact} target="_blank">
+            <CirclesBlock
+                id="second-info-circles-block"
+                center={rssReact}
+                satelliteA={react}
+                satelliteB={reactHooks}
+                satelliteC={reactRedux}
+                satelliteD={figma}
+              />
+          </a>
           <TextBlock 
             heading={t('AnimationHeadingB')}
             text={t('AnimationParagraphB')}
@@ -86,18 +98,20 @@ export default function MainAnimtion(){
             link={rssLinkReact}
             nextDiv={document.querySelector(".main-animation_container_c")}
           />
-          <CirclesBlock
-            id="second-info-circles-block"
-            center={rssReact}
-            satelliteA={react}
-            satelliteB={reactHooks}
-            satelliteC={reactRedux}
-            satelliteD={figma}
-          />
         </div>
         <FlyAnimation />
 
         <div className="main-animation_container_c">
+          <a href={elangLink} target="_blank">
+            <CirclesBlock
+              id="third-info-circles-block"
+              center={junior}
+              satelliteA={webpack}
+              satelliteB={jest}
+              satelliteC={svg}
+              satelliteD={english}
+            />
+          </a>
           <TextBlock 
             heading={t('AnimationHeadingC')}
             text={t('AnimationParagraphC')}
@@ -109,14 +123,7 @@ export default function MainAnimtion(){
             link={elangLink}
             nextDiv={document.querySelector(".footer")}
           />
-          <CirclesBlock
-            id="third-info-circles-block"
-            center={junior}
-            satelliteA={webpack}
-            satelliteB={jest}
-            satelliteC={svg}
-            satelliteD={english}
-          />
+        
         </div>
         <FlyAnimation />
 

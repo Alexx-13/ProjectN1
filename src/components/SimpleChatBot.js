@@ -1,23 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
 import botAvatar from "../assets/images/bot-avatar.png";
+import myAvatar from "../assets/images/my-avatar.svg";
 import "../styles/SimpleChatBot.scss";
 
 export default function SimpleChatBot(){
+  const [botWidth, setBotWidth] = useState("30vw")
+  const [appearBot, setAppearBot] = useState(true);
+  const changeBotSize = () => {
+    if(window.innerWidth >= "600"){
+      setAppearBot(true);
+      setBotWidth("35vw");
+    } else if(window.innerWidth < "600") {
+      setAppearBot(false);
+    } else {
+      setBotWidth("30vw");
+      setAppearBot(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", changeBotSize);
+    window.addEventListener("load", changeBotSize);
+  }, []);
+
 
   return(
     <div className="simple-chat-bot">
       <div className="simple-chat-bot_content">
-        <ThemeProvider theme={theme}>
-          <ChatBot 
-            steps={steps} 
-            headerTitle="Chat Bot"
-            botAvatar = {botAvatar}
-            userDelay="500"
-            floating={true}
-          />
-        </ThemeProvider>
+        {appearBot ? 
+          <ThemeProvider theme={theme}>
+            <ChatBot 
+              steps={steps} 
+              headerTitle="Chat Bot"
+              botAvatar={myAvatar}
+              userDelay="500"
+              width={botWidth}
+              floating={true}
+            />
+          </ThemeProvider>
+        :null }
       </div>
     </div>
   )
