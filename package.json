@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "predeploy": "webpack --mode production",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d root",
+    "prod": "npm run predeploy && npm run deploy"
   },
   "author": "",
   "license": "ISC",
