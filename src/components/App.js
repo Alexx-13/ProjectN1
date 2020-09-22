@@ -21,7 +21,6 @@ export default function App() {
         <SimpleChatBot />
         <Footer />
       </div>
-
     </div>
   );
 }
