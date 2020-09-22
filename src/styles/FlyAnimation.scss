@@ -153,6 +153,10 @@
 
 @keyframes animate {
   0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+    -moz-transform: translateY(0) rotate(0deg);
+    -ms-transform: translateY(0) rotate(0deg);
+    -o-transform: translateY(0) rotate(0deg);
     transform: translateY(0) rotate(0deg);
     opacity: 1;
     border-radius: 70%; 
@@ -162,11 +166,19 @@
     border-radius: 0%; 
   }
   50% {
+    -webkit-transform: translateY(-500) rotate(320deg);
+    -moz-transform: translateY(-500) rotate(320deg);
+    -ms-transform: translateY(-500) rotate(320deg);
+    -o-transform: translateY(-500) rotate(320deg);
     transform: translateY(-500) rotate(320deg);
     opacity: 1;
     border-radius: 10%; 
   }
   100% {
+    -webkit-transform: translateY(-1000px) rotate(720deg);
+    -moz-transform: translateY(-1000px) rotate(720deg);
+    -ms-transform: translateY(-1000px) rotate(720deg);
+    -o-transform: translateY(-1000px) rotate(720deg);
     transform: translateY(-1000px) rotate(720deg);
     border: solid $darkBlue 2px;
     opacity: 0;
