@@ -4,7 +4,6 @@
 .fly-animation{
   @include flexCenterHW;
   &_circles{
-    // position: absolute;
     top: 0;
     left: 0%;
     width: 30%;
@@ -16,16 +15,14 @@
       list-style: none;
       width: 20px;
       height: 20px;
+      -webkit-animation: animate 10s linear infinite;
+      -moz-animation: animate 10s linear infinite;
+      -ms-animation: animate 10s linear infinite;
+      -o-animation: animate 10s linear infinite;
       animation: animate 5s linear infinite;
       background-color: whitesmoke;
       transition: 500ms ease-in-out;
     }
-
-        
-    // .disappear-circle{
-    //   transition: all 0.4s ease 0s;
-    //   border-radius: 70%;
-    // }
 
     li:hover{
       background-color: $lightBlue;
