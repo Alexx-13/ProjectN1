@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../styles/SideLinks.scss';
 import vk from '../assets/images/social/vk-soc.svg';
 import telegram from '../assets/images/social/telegram-soc.svg';
