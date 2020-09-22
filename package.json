@@ -1,9 +1,8 @@
 {
-  "name": "projectn1",
+  "name": "visitc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://alexx-13.github.io/ProjectN1/",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "predeploy": "webpack --mode production",
