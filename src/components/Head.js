@@ -8,7 +8,7 @@ export default function Head(){
   const { t, i18n } = useTranslation();
 
   const scrollLow = () => {
-    document.querySelector(".main-animation_container_head").scrollIntoView({block: "center", behavior: "smooth"});
+    document.querySelector(".main_section h1").scrollIntoView({block: "center", behavior: "smooth"});
   }
 
   return(

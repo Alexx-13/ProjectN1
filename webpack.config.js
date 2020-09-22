@@ -33,8 +33,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      favicon: "./src/assets/images/bot-avatar.png"
+      template: "./src/index.html"
     }),
   ]
   

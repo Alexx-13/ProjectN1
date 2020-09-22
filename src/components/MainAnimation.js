@@ -70,7 +70,7 @@ export default function MainAnimtion(){
             paragraphC={t('AnimationBlockA3')}
             linkIcon={rss}
             link={rssLink}
-            nextDiv={document.querySelector(".main-animation_container_b")}
+            nextDiv={document.querySelector("#second-info-circles-block")}
           />
         </div>
         <FlyAnimation />
@@ -96,7 +96,7 @@ export default function MainAnimtion(){
             paragraphC={t('AnimationBlockB3')}
             linkIcon={rssReact}
             link={rssLinkReact}
-            nextDiv={document.querySelector(".main-animation_container_c")}
+            nextDiv={document.querySelector("#third-info-circles-block")}
           />
         </div>
         <FlyAnimation />
