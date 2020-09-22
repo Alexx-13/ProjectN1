@@ -6,39 +6,39 @@ html,body{
   @include pureDiv;
   @include hundredHW;
   scrollbar-arrow-color:  $lightBlue;
-  // ::-webkit-scrollbar {
-  //   width: 12px;  /* for vertical scrollbars */
-  //   height: 12px; /* for horizontal scrollbars */
-  // }
+  ::-webkit-scrollbar {
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+  }
   
-  // ::-webkit-scrollbar-track {
-  //   background: $lightBlue;
-  // }
+  ::-webkit-scrollbar-track {
+    background: $lightBlue;
+  }
   
-  // ::-webkit-scrollbar-thumb {
-  //   border-radius: 20px;
-  //   background: $white;
-  //   border: solid 1px $darkBlue;
-  // }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: $white;
+    border: solid 1px $darkBlue;
+  }
 };
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
-}
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: blue orange;
+// }
 
-/* Works on Chrome/Edge/Safari */
-*::-webkit-scrollbar {
-  width: 12px;
-}
-*::-webkit-scrollbar-track {
-  background: orange;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: blue;
-  border-radius: 20px;
-  border: 3px solid orange;
-}
+// /* Works on Chrome/Edge/Safari */
+// *::-webkit-scrollbar {
+//   width: 12px;
+// }
+// *::-webkit-scrollbar-track {
+//   background: orange;
+// }
+// *::-webkit-scrollbar-thumb {
+//   background-color: blue;
+//   border-radius: 20px;
+//   border: 3px solid orange;
+// }
 
 .App{
   @include flexCenterHW;
