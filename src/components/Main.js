@@ -25,7 +25,6 @@ export default function Main() {
   }, []);
 
   useEffect(() => {
-    console.log(windowHeight)
     if (windowHeight > 10 && windowHeight < 97) {
       setSideLinks(true);
     } else {
