@@ -33,8 +33,10 @@ export default function Main() {
     }
   }, [windowHeight]);
 
+
   return (
     <div className="main">
+      <div className="cursor"></div>
       {sidelinks
         ? <SideLinks />
         : null}
@@ -46,7 +48,7 @@ export default function Main() {
         </h1>
 
         <MainAnimtion />
-
+        
       </div>
     </div>
   );

@@ -5,6 +5,20 @@
 html,body{
   @include pureDiv;
   @include hundredHW;
+  ::-webkit-scrollbar {
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $lightBlue;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: $white;
+    border: solid 1px $darkBlue;
+  }
 };
 
 .App{

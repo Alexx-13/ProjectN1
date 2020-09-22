@@ -127,31 +127,33 @@ export default function MainAnimtion() {
   );
 }
 
-const CirclesBlock = (parameters) => (
-  <div className="circles-block" id={parameters.id}>
-    <div className="circles-block_central-object">
-      <img src={parameters.center} />
-    </div>
-    <div className="circles-block_orbit">
-      <div className="circles-block_orbit_group" id="orbit-group-a">
-        <div className="circles-block_orbit_group_satellite" id="satellite-a">
-          <img src={parameters.satelliteA} />
+const CirclesBlock = (parameters) => {
+  return (
+    <div className="circles-block" id={parameters.id}>
+      <div className="circles-block_central-object">
+        <img src={parameters.center} />
+      </div>
+      <div className="circles-block_orbit">
+        <div className="circles-block_orbit_group" id="orbit-group-a">
+          <div className="circles-block_orbit_group_satellite" id="satellite-a">
+            <img src={parameters.satelliteA} />
+          </div>
+          <div className="circles-block_orbit_group_satellite" id="satellite-b">
+            <img src={parameters.satelliteB} />
+          </div>
         </div>
-        <div className="circles-block_orbit_group_satellite" id="satellite-b">
-          <img src={parameters.satelliteB} />
+        <div className="circles-block_orbit_group" id="orbit-group-b">
+          <div className="circles-block_orbit_group_satellite" id="satellite-c">
+            <img src={parameters.satelliteC} />
+          </div>
+          <div className="circles-block_orbit_group_satellite" id="satellite-d">
+            <img src={parameters.satelliteD} />
+          </div>
         </div>
       </div>
-      <div className="circles-block_orbit_group" id="orbit-group-b">
-        <div className="circles-block_orbit_group_satellite" id="satellite-c">
-          <img src={parameters.satelliteC} />
-        </div>
-        <div className="circles-block_orbit_group_satellite" id="satellite-d">
-          <img src={parameters.satelliteD} />
-        </div>
-      </div>
     </div>
-  </div>
-);
+  );
+}
 
 const TextBlock = (parameters) => {
   const { t, i18n } = useTranslation();
