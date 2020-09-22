@@ -1,9 +1,8 @@
-import React from "react";
-import "../styles/FlyAnimation.scss";
+import React from 'react';
+import '../styles/FlyAnimation.scss';
 
-export default function FlyAnimation(){
-
-  return(
+export default function FlyAnimation() {
+  return (
     <div className="fly-animation">
       <ul className="fly-animation_circles">
         <AnimationFigure />
@@ -23,20 +22,11 @@ export default function FlyAnimation(){
         <AnimationFigure />
       </ul>
     </div>
-  )
+  );
 };
 
-const AnimationFigure = () => {
-  // const disappearOnClick = (e) => {
-  //   console.log(e)
-  //   e.target.classList.add("disappear-circle")
-  // };
-  
+const AnimationFigure = () =>{
   return(
-    <li 
-      // onClick={(e) => {
-      //   disappearOnClick(e)
-      // }}
-    />
-  )
-};
+    <li />
+  );
+}

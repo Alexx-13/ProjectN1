@@ -1,10 +1,10 @@
-import React from "react";
-import "../styles/AppPreloader.scss";
+import React from 'react';
+import '../styles/AppPreloader.scss';
 
-export default function AppPreloader(){
-  return(
+export default function AppPreloader() {
+  return (
     <div className="App-preloader">
-      <div className="App-preloader_circle"></div>
+      <div className="App-preloader_circle" />
     </div>
-  )
+  );
 }

@@ -1,46 +1,50 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { returnScrollPercentages } from "../helpfullFunctions/countPercentages";
+import { returnScrollPercentages } from '../helpfullFunctions/countPercentages';
 
-import MainAnimtion from "./MainAnimation";
-import SideLinks from "./SideLinks";
+import MainAnimtion from './MainAnimation';
+import SideLinks from './SideLinks';
 
-import "../styles/Main.scss";
+import '../styles/Main.scss';
 
-export default function Main(){
+export default function Main() {
   const { t, i18n } = useTranslation();
   const [sidelinks, setSideLinks] = useState(false);
   const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       setWindowHeight(returnScrollPercentages);
     });
-  
+
     return () => {
-      window.removeEventListener("scroll", () => {
+      window.removeEventListener('scroll', () => {
         setWindowHeight(returnScrollPercentages);
       });
-    }
+    };
   }, []);
 
   useEffect(() => {
-    if(windowHeight > 20){
-      setSideLinks(true)
+    if (windowHeight > 20) {
+      setSideLinks(true);
     }
-  }, [windowHeight])
+  }, [windowHeight]);
 
-  return(
+  return (
     <div className="main">
-      {sidelinks ?
-        <SideLinks />
-      : null}
+      {sidelinks
+        ? <SideLinks />
+        : null}
       <div className="main_section" id="section-b">
-        <h1>{t('MainHeadingA')}<br />{t('MainHeadingB')}</h1>
+        <h1>
+          {t('MainHeadingA')}
+          <br />
+          {t('MainHeadingB')}
+        </h1>
 
         <MainAnimtion />
 
       </div>
     </div>
-  )
-};
+  );
+}

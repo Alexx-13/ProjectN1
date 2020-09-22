@@ -1,50 +1,50 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import botAvatar from "../assets/images/bot-avatar.png";
-import myAvatar from "../assets/images/my-avatar.svg";
-import "../styles/SimpleChatBot.scss";
+import myAvatar from '../assets/images/my-avatar.svg';
+import '../styles/SimpleChatBot.scss';
 
-export default function SimpleChatBot(){
-  const [botWidth, setBotWidth] = useState("30vw")
+export default function SimpleChatBot() {
+  const [botWidth, setBotWidth] = useState('30vw');
   const [appearBot, setAppearBot] = useState(true);
   const changeBotSize = () => {
-    if(window.innerWidth >= "600"){
+    if (window.innerWidth >= '600') {
       setAppearBot(true);
-      setBotWidth("35vw");
-    } else if(window.innerWidth < "600") {
+      setBotWidth('35vw');
+    } else if (window.innerWidth < '600') {
       setAppearBot(false);
     } else {
-      setBotWidth("30vw");
+      setBotWidth('30vw');
       setAppearBot(true);
     }
   };
 
   useEffect(() => {
-    window.addEventListener("resize", changeBotSize);
-    window.addEventListener("load", changeBotSize);
+    window.addEventListener('resize', changeBotSize);
+    window.addEventListener('load', changeBotSize);
   }, []);
 
-
-  return(
+  return (
     <div className="simple-chat-bot">
       <div className="simple-chat-bot_content">
-        {appearBot ? 
-          <ThemeProvider theme={theme}>
-            <ChatBot 
-              steps={steps} 
-              headerTitle="Chat Bot"
-              botAvatar={myAvatar}
-              userDelay="500"
-              width={botWidth}
-              floating={true}
-            />
-          </ThemeProvider>
-        :null }
+        {appearBot
+          ? (
+            <ThemeProvider theme={theme}>
+              <ChatBot
+                steps={steps}
+                headerTitle="Chat Bot"
+                botAvatar={myAvatar}
+                userDelay="500"
+                width={botWidth}
+                floating
+              />
+            </ThemeProvider>
+          )
+          : null }
       </div>
     </div>
-  )
-};
+  );
+}
 
 const steps = [
   {
@@ -53,7 +53,7 @@ const steps = [
     trigger: '3',
   },
   {
-    id: "2",
+    id: '2',
     message: 'Alright, goodbye!',
     end: true,
   },
@@ -63,7 +63,7 @@ const steps = [
       { value: 1, label: 'What is this?', trigger: '4' },
       { value: 2, label: 'How can I text you?', trigger: '5' },
       { value: 3, label: 'How is your day?', trigger: '6' },
-      { value: 4, label: 'No', trigger: '2' }
+      { value: 4, label: 'No', trigger: '2' },
     ],
   },
   {
@@ -78,7 +78,7 @@ const steps = [
   },
   {
     id: '6',
-    message: `My day is fine, perhaps even better then yours!`,
+    message: 'My day is fine, perhaps even better then yours!',
     trigger: '0',
   },
 ];

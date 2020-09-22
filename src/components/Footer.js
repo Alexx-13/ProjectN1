@@ -1,32 +1,31 @@
-import React, { useState } from "react";
-import SideLinks from "./SideLinks";
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import "../styles/Footer.scss";
+import '../styles/Footer.scss';
 
-import vk from "../assets/images/social/vk-soc.svg";
-import telegram from "../assets/images/social/telegram-soc.svg";
-import github from "../assets/images/social/github-soc.svg";
+import vk from '../assets/images/social/vk-soc.svg';
+import telegram from '../assets/images/social/telegram-soc.svg';
+import github from '../assets/images/social/github-soc.svg';
 
-export default function Footer(){
+export default function Footer() {
   const { t, i18n } = useTranslation();
 
-  const [seniorContent, setSeinorContent] = useState("?");
-  const [cursor, setCursor] = useState("pointer")
-  const [fontSize, setFontSize] = useState("10vw");
+  const [seniorContent, setSeinorContent] = useState('?');
+  const [cursor, setCursor] = useState('pointer');
+  const [fontSize, setFontSize] = useState('10vw');
   const [appearSeniorText, setAppearSeniorText] = useState(false);
 
-  const vkLink = "https://vk.com/kernoga";
-  const tgLink = "https://t.me/alexx__1__3";
-  const ghLink = "https://github.com/Alexx-13";
+  const vkLink = 'https://vk.com/kernoga';
+  const tgLink = 'https://t.me/alexx__1__3';
+  const ghLink = 'https://github.com/Alexx-13';
 
   const changeContent = () => {
-    setSeinorContent("Senior Full-stack Developer");
-    setFontSize("4vw");
+    setSeinorContent('Senior Full-stack Developer');
+    setFontSize('4vw');
     setAppearSeniorText(true);
-    setCursor("auto")
+    setCursor('auto');
   };
 
-  return(
+  return (
     <div className="footer">
       <div className="footer_top">
         <div className="footer_top_title">
@@ -37,25 +36,28 @@ export default function Footer(){
 
         <div className="footer_top_content">
           <div className="footer_top_content_left">
-            {appearSeniorText ?
-              <SeniorText 
-                text={t('FooterGoalA')}
-                className="senior-text left-senior"
-              />
-            : null}
+            {appearSeniorText
+              ? (
+                <SeniorText
+                  text={t('FooterGoalA')}
+                  className="senior-text left-senior"
+                />
+              )
+              : null}
           </div>
-          
-          <div className="senior-circle activated-senior"
+
+          <div
+            className="senior-circle activated-senior"
             style={{
-              cursor: cursor
+              cursor,
             }}
             onClick={() => {
-              changeContent()
+              changeContent();
             }}
           >
-            <h2 
+            <h2
               style={{
-                fontSize: fontSize
+                fontSize,
               }}
             >
               {seniorContent}
@@ -63,32 +65,31 @@ export default function Footer(){
           </div>
 
           <div className="footer_top_content_right">
-            {appearSeniorText ?
-              <SeniorText 
-                text={t('FooterGoalB')}
-                className="senior-text right-senior"
-              />
-            : null}
+            {appearSeniorText
+              ? (
+                <SeniorText
+                  text={t('FooterGoalB')}
+                  className="senior-text right-senior"
+                />
+              )
+              : null}
           </div>
         </div>
-        
+
       </div>
       <div className="footer_low">
         <div className="footer_low_links">
           <a href={vkLink} target="_blank"><img src={vk} /></a>
-          <a href={tgLink} target="_blank"><img src ={telegram} /></a>
+          <a href={tgLink} target="_blank"><img src={telegram} /></a>
           <a href={ghLink} target="_blank"><img src={github} /></a>
         </div>
       </div>
     </div>
-  )
-};
+  );
+}
 
-const SeniorText = (props) => {
-  
-  return(
-    <div className={props.className}>
-      <h2>{props.text}</h2>
-    </div>
-  )
-};
+const SeniorText = (props) => (
+  <div className={props.className}>
+    <h2>{props.text}</h2>
+  </div>
+);
