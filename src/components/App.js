@@ -7,7 +7,6 @@ import Head from './Head';
 import Main from './Main';
 import Footer from './Footer';
 import SimpleChatBot from './SimpleChatBot';
-import { window } from 'd3';
 
 export default function App() {
   return (
