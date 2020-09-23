@@ -120,6 +120,7 @@
         @include flexCenterHW;
         position: relative;
         z-index: 50;
+        
         &_central-object{
           border-radius: 50%;
           img{
@@ -214,6 +215,7 @@
           }
         }
         .circles-block{
+          @include hooverGeneralBtn;
           border-radius: 50px;
         }
       }
