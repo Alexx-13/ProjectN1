@@ -22,11 +22,10 @@ export default function ScrollIndicator() {
   }, [windowHeight]);
 
   return (
-    <div
-      className="scroll-indicator"
+    <div className="scroll-indicator"
       style={{ width: `${windowHeight}%` }}
     >
-      <p />
+      <p style={{ width: `${windowHeight}%` }}/>
     </div>
   );
 }
