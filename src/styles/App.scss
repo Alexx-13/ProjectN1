@@ -1,12 +1,13 @@
 @import "../shared/mixins/mixins.scss";
 @import "../shared/variables/variables.scss";
+// @import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
+  // src: url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
+  // src: url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 html,body{
   @include pureDiv;
   @include hundredHW;
-  font-family: $logoFont;
   // src: url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
-  // src: url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
   /* Mozilla*/
   scrollbar-arrow-color:  $lightBlue;
   scrollbar-width: thin;
