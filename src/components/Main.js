@@ -35,7 +35,6 @@ export default function Main() {
 
   return (
     <div className="main">
-      <div className="cursor"></div>
       {sidelinks
         ? <SideLinks />
         : null}

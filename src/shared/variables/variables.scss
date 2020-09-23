@@ -25,11 +25,13 @@ $white: #fdfdfd;
 $green: #45C01A;
 $darkBlue: #151386;
 $lightBlue: #1284B5;
+$textShadowBlue: -0.1vw -0.1vw 0 hsl(198, 82%, 39%), -0.2vw -0.2vw 1px	hsl(198, 82%, 39%);
 /* */
 
 /* fonts */
 // $logoFont: 'Oleo Script';
-$logoFont: 'Quicksand', sans-serif;
+// $logoFont: 'Quicksand', sans-serif;
+$logoFont: 'Oleo Script', cursive;
 /* */
 
 /* animation time */

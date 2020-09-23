@@ -31,6 +31,9 @@
         max-width: 70%;
         border-left: 5px solid $lightBlue;
         border-top: 5px solid $lightBlue;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+        box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
         h3, h4{
           padding: 0 $paddingJustifyGeneral;
           font-size: 1.5vw;
@@ -57,6 +60,9 @@
       border-radius: 50%;
       border: 5px solid $lightBlue;
       border-right: none;
+      -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+      -moz-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+      box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
     }
   }
 };
@@ -73,6 +79,9 @@
   border-radius: 70%;
   padding: 1px;
   animation: upAndDown 1s linear infinite;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+  box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
   cursor: pointer;
 };
 
