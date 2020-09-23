@@ -7,7 +7,7 @@ html,body{
   @include hundredHW;
   /* Mozilla*/
   scrollbar-arrow-color:  $lightBlue;
-  scrollbar-width: 12px;
+  scrollbar-width: thin;
   scrollbar-color: $white $lightBlue ;
   /* Google */
   ::-webkit-scrollbar {
