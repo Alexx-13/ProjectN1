@@ -14,14 +14,17 @@ export default function ModuleWindow(props) {
   return (
     <div className="module-window activated-modal">
       <div className="module-window_hard">
-        <h3>
-          {t('ModuleWindowTitleA')}
+        <div className="module-window_hard_title">
+          <h3>
+            {t('ModuleWindowTitleA')}
+          </h3>
           <button
             onClick={() => { props.updateShowModuleWindow(false); }}
           >
             X
           </button>
-        </h3>
+        </div>
+        
         <SkillsSlider
           textA={t('ModuleWindowATextA1')}
           textB={t('ModuleWindowATextA2')}

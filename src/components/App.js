@@ -11,7 +11,7 @@ import SimpleChatBot from './SimpleChatBot';
 export default function App() {
   return (
     <div className="App">
-      <AppPreloader />
+      {/* <AppPreloader /> */}
       <div className="pre-App">
         <Navbar />
         <Head />
