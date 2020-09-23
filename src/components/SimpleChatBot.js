@@ -5,16 +5,16 @@ import myAvatar from '../assets/images/my-avatar.svg';
 import '../styles/SimpleChatBot.scss';
 
 export default function SimpleChatBot() {
-  const [botWidth, setBotWidth] = useState('30vw');
+  const [botWidth, setBotWidth] = useState('100px');
   const [appearBot, setAppearBot] = useState(true);
   const changeBotSize = () => {
     if (window.innerWidth >= '600') {
       setAppearBot(true);
-      setBotWidth('35vw');
+      setBotWidth('40%');
     } else if (window.innerWidth < '600') {
       setAppearBot(false);
     } else {
-      setBotWidth('30vw');
+      setBotWidth('100px');
       setAppearBot(true);
     }
   };
@@ -35,6 +35,7 @@ export default function SimpleChatBot() {
                 headerTitle="Chat Bot"
                 botAvatar={myAvatar}
                 userDelay="500"
+                height="70%"
                 width={botWidth}
                 floating
               />

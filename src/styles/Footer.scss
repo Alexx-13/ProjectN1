@@ -112,10 +112,16 @@
       &_left{
         @include flexStart;
         width: 20vw;
+        h2{
+          animation: opacitySideBlock 5s;
+        }
       }
       &_right{
         @include flexEnd;
         width: 20vw;
+        h2{
+          animation: opacitySideBlock 5s;
+        }
       }
 
       .left-senior, .right-senior{
@@ -192,6 +198,15 @@
     height: 20vw;
   }
 };
+
+@keyframes opacitySideBlock{
+  0%{
+    opacity: 0
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 @media screen and (max-width: 1024px){
   .footer_top_content{
