@@ -10,32 +10,38 @@
   top: 30%;
   z-index: 51;
 
-  img{
-    width: 60px;
-    height: 60px;
+  a{
+    @include flexCenter;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
     background-color: $white;
     border: 2px solid $black;
-    border-radius: 50%;
-    -webkit-transition: all $fastTransitionTime ease-in;
-    transition: all $fastTransitionTime ease-in;
     box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    border-radius: 50%;
+
+    img{
+      width: 45px;
+      height: 45px;
+    }
+    
+  }
+  a:hover{
+      border-radius: 20%;
+      border: 2px solid $white;
+      -webkit-transition: all $fastTransitionTime ease-in;
+      transition: all $fastTransitionTime ease-in;
   }
 
-  img:hover{
-    border-radius: 20%;
-    border: 2px solid $white;
-    -webkit-transition: all $fastTransitionTime ease-in;
-    transition: all $fastTransitionTime ease-in;
-  }
 };
 
 .activated{
   left: 10px;
-  -webkit-animation: showFromTheSide $smoothTransitionTime linear;
-  -moz-animation: showFromTheSide $smoothTransitionTime linear;
+  -webkit-animation: showFromTheSide $generalTransitionTime linear;
+  -moz-animation: showFromTheSide $generalTransitionTime linear;
   -ms-animation: showFromTheSide $smoothTransitionTime linear;
-  -o-animation: showFromTheSide $smoothTransitionTime linear;
-  animation: showFromTheSide $smoothTransitionTime linear;
+  -o-animation: showFromTheSide $generalTransitionTime linear;
+  animation: showFromTheSide $generalTransitionTime linear;
 };
 
 @keyframes showFromTheSide {
@@ -49,9 +55,14 @@
 
 @media screen and (max-width: 1024px){
   .side-links{
-    img{
+    a{
       width: 40px;
       height: 40px;
+
+      img{
+        width: 35px;
+        height: 35px;
+      }
     }
   }
-}
+};

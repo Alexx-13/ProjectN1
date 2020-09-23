@@ -127,27 +127,34 @@
     &_links{
       @include flexSpaceAroundHW;
       width: 50%;
-      img{
-        width: 60px;
-        height: 60px;
+
+      a{
+        @include flexCenter;
+        width: 50px;
+        height: 50px;
+        padding: 7px;
         background-color: $white;
-        border: 2px solid $black;
-        border-radius: 20%;
-        -webkit-transition: all $fastTransitionTime ease-in;
-        transition: all $fastTransitionTime ease-in;
-        box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-      }
-    
-      img:hover{
-        border-radius: 50%;
         border: 2px solid $lightBlue;
-        -webkit-transition: all $fastTransitionTime ease-in;
-        transition: all $fastTransitionTime ease-in;
+        box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        border-radius: 50%;
+        margin: 1vw;
+    
+        img{
+          width: 45px;
+          height: 45px;
+        }
+        
       }
+      a:hover{
+          border-radius: 20%;
+          border: 2px solid $white;
+          -webkit-transition: all $fastTransitionTime ease-in;
+          transition: all $fastTransitionTime ease-in;
+      }
+
     }
   }
 };
-
 
 @keyframes appearSeniorText{
   0%{
@@ -192,3 +199,28 @@
     };
   }
 };
+
+@media screen and (max-width: 1024px){
+  .side-links{
+    a{
+      width: 40px;
+      height: 40px;
+
+      img{
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  .footer_low_links{
+    a{
+      width: 40px;
+      height: 40px;
+
+      img{
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
