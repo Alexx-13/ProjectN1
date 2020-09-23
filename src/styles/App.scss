@@ -5,7 +5,11 @@
 html,body{
   @include pureDiv;
   @include hundredHW;
+  /* Mozilla*/
   scrollbar-arrow-color:  $lightBlue;
+  scrollbar-width: 12px;
+  scrollbar-color: $white $lightBlue ;
+  /* Google */
   ::-webkit-scrollbar {
     width: 12px;  /* for vertical scrollbars */
     height: 12px; /* for horizontal scrollbars */
