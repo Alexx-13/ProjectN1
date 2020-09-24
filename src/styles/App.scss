@@ -32,6 +32,9 @@ html,body{
 .App{
   @include flexCenterHW;
   flex-direction: column;
+  p{
+    font-family: $additionalFont;
+  }
 
 
   .pre-App{
