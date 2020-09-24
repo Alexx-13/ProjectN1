@@ -78,7 +78,7 @@
 };
 
 .activated-modal{
-  margin-top: 0%;
+  margin-top: none;
   -webkit-animation: showFromTheTop $generalTransitionTime linear;
   -moz-animation: showFromTheTop $generalTransitionTime linear;
   -ms-animation: showFromTheTop $generalTransitionTime linear;
@@ -91,7 +91,7 @@
     margin-top: -20%;
   }
   100%{
-    margin-top: 0%;
+    margin-top: none;
   }
 };
 
@@ -100,7 +100,7 @@
     margin-top: -20%;
   }
   100%{
-    margin-top: 0%;
+    margin-top: none;
   }
 }
 
