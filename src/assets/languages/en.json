@@ -44,6 +44,20 @@
   "FooterSection": "The Goal",
 
   "FooterGoalA": "A goal was set",
-  "FooterGoalB": "The goal will be achieved"
+  "FooterGoalB": "The goal will be achieved",
+
+  "FooterAboutTitle": "So what desires are keeping me afloat?",
+  "FooterAboutText1": "To create",
+  "FooterAboutText2": "To innovate",
+  "FooterAboutText3": "To be noticed",
+  "FooterAboutText4": "To grow as a professional",
+  "FooterAboutText5": "To satisfy ambitions",
+  "FooterAboutText6": "To be on the top",
+  "FooterAboutText7": "To live well",
+  "FooterAboutText8": "To be happy",
+
+  "FooterGoodbyeA": "See",
+  "FooterGoodbyeB": "you",
+  "FooterGoodbyeC": "soon!"
 
 }

@@ -45,5 +45,19 @@
   "FooterSection": "Моя Цель",
   
   "FooterGoalA": "Цель была поставлена",
-  "FooterGoalB": "Цель будет достигнута"
+  "FooterGoalB": "Цель будет достигнута",
+
+  "FooterAboutTitle": "Так какие желания держит меня на плаву?",
+  "FooterAboutText1": "Создавать",
+  "FooterAboutText2": "Творить новое",
+  "FooterAboutText3": "Быть замеченным",
+  "FooterAboutText4": "Расти как профессионал",
+  "FooterAboutText5": "Aмбиции",
+  "FooterAboutText6": "Добиться успеха",
+  "FooterAboutText7": "Хорошо жить",
+  "FooterAboutText8": "Быть счастливым",
+
+  "FooterGoodbyeA": "До",
+  "FooterGoodbyeB": "скорых",
+  "FooterGoodbyeC": "встреч!"
 }

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../styles/Footer.scss';
+import About from "./About";
+import FlyAnimation from './FlyAnimation';
+import Goodbye from "./Goodbye";
 
 import vk from '../assets/images/social/vk-soc.svg';
 import telegram from '../assets/images/social/telegram-soc.svg';
@@ -77,6 +80,9 @@ export default function Footer() {
         </div>
 
       </div>
+      <About />
+      <FlyAnimation />
+      <Goodbye />
       <div className="footer_low">
         <div className="footer_low_links">
           <a href={vkLink} target="_blank"><img src={vk} /></a>

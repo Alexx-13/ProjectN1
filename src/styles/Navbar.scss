@@ -22,7 +22,7 @@
     @include flexCenter;
     
     &_logo{
-      padding-left: $paddingJustifyGeneral;
+      padding: $paddingJustifyGeneral $paddingJustifyGeneral 0 $paddingJustifyGeneral;
       h2{
         @include correctBtn;
         font-size: $logoFontSize;
@@ -30,6 +30,7 @@
         color: $white;
         margin: 0;
         height: 70px;
+        padding: 10px 0;
         scroll-behavior: smooth;
         transition: all 0.4s ease 0s;
         text-shadow: $textShadowBlue;
@@ -37,41 +38,6 @@
       h2:hover i{
         color: $lightBlue;
         transition: all 0.4s ease 0s;
-      }
-    }
-    &_lang{
-      @include flexCenter;
-      @include navBtnStyles;
-      margin-left: $paddingJustifyGeneral;
-      -webkit-transition: all $generalTransitionTime ease-in;
-      transition: all $generalTransitionTime ease-in;
-      button{
-        @include navBtnStyles;
-        font-family: $logoFont;
-      }
-      ul{
-        @include pureDiv;
-        display: inline-flex;
-        li{
-          list-style-type: none;
-          button{
-            width: 50px;
-          }
-
-        }
-      }
-    }
-    &_lang:hover{
-      margin-left: $paddingJustifyGeneral;
-      transition: all .2s ease-in;
-      justify-content: start;
-      #main-lang-btn{
-        color: $darkBlue;
-        background-color: $white;
-      }
-
-      #main-lang-btn::hover{
-        @include hooverGeneralBtn;
       }
     }
   }
@@ -165,7 +131,7 @@
   .toggle{
     left: 160px;
   }
-}
+};
 
 @media screen and (max-width: 360px){
   .navbar_left_logo {
@@ -180,4 +146,4 @@
     left: 130px;
   }
 
-}
+};

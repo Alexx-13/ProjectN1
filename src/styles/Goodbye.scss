@@ -1,0 +1,46 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.goodbye{
+  @include flexCenterHW;
+  flex-direction: column;
+  // opacity: 0;
+
+  &_content{
+    @include flexSpaceBetweenHW;
+    padding: $paddingJustifyGeneral 0;
+    transition: all 0.4s ease 0s;
+    &_left{
+      width: 100%;
+      height: 7vw;
+      background-color: $lightBlue;
+      box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    }
+    .goodbye-move-a{
+      padding-right: 50vw;
+    }
+    .goodbye-move-b{
+      padding-right: 30vw;
+    }
+    .goodbye-move-c{
+      padding-right: 10vw;
+    }
+    
+    h3{
+      @include flexStart;
+      @include pureDiv;
+      user-select: none;
+      box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+      text-shadow: $lightBlue 1px 0 10px;
+      padding-left: 1vw;
+      font-style: italic;
+      font-size: 7vw;
+      width: 50vw;
+      border: 3px solid $lightBlue;
+      background-color: $black;
+      color: $white;
+      transition: all .9s ease 0s;
+    }
+
+  }
+};

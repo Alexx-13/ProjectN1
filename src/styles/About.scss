@@ -1,0 +1,93 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.about{
+  @include flexCenterHW;
+  flex-direction: column;
+  &_title{
+    @include flexSpaceBetweenHW;
+    background-color: $black;
+    box-shadow: 0px 0px 70px 0px rgba(69, 153, 192, 0.57);
+    &_left{
+      width: 10vw;
+      border-bottom: 0.7vw solid $white;
+    }
+    &_right{
+      width: 100%;
+      border-bottom: 0.7vw solid $white;
+    }
+    h2{
+      @include pureDiv;
+      font-size: 4vw;
+      color: $white;
+      text-align: center;
+      text-shadow: $lightBlue 1px 0 10px;
+      padding: 0.7vw 0;
+    }
+  }
+  #first-about{
+    margin-top: $marginAlignGeneral * 2;
+  }
+  #second-about{
+    margin: $marginAlignGeneral * 2 0;
+  }
+  #seporator{
+    @include flexSpaceAroundHW;
+  }
+
+  &_content{
+    @include flexCenterHW;
+    &_block{
+      @include flexCenter;
+      @include hooverGeneralBtn;
+      border-radius: 25px;
+      cursor: pointer;
+      width: 20vw;
+      height: 15vw;
+      background-color: $lightBlue;
+      border: 0.3vw solid $white;
+      text-align: center;
+    
+      h3{
+        color: $black;
+        font-size: 2vw;
+        transition: all 0.4s ease 0s;
+        user-select: none;
+      }
+    }
+    &_block:hover{
+      background-color: $white;
+      border-radius:  25% 0;
+    }
+    &_block:active{
+      border-radius: 60%;
+    }
+    .hoverd-block{
+      background-color: $white;
+      border: 0.3vw solid $lightBlue;
+    }
+    .hoverd-block:hover > h3{
+      font-size: 2.2vw;
+      text-shadow: $lightBlue 1px 0 10px;
+      color: $white;
+    }
+  }
+  
+
+}
+
+@media screen and (max-width: 900px){
+  .about{
+    #second-about{
+      margin: 0;
+    }
+  }
+  .about_content_block{
+    width: 40vw;
+    margin-bottom: 15px;
+  }
+
+  #seporator{
+    flex-direction: column;
+  }
+}
