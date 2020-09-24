@@ -4,7 +4,7 @@
 .goodbye{
   @include flexCenterHW;
   flex-direction: column;
-  // opacity: 0;
+  z-index: $moduleWindowZIndex;
 
   &_content{
     @include flexSpaceBetweenHW;
@@ -29,7 +29,6 @@
     h3{
       @include flexStart;
       @include pureDiv;
-      user-select: none;
       box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
       text-shadow: $lightBlue 1px 0 10px;
       padding-left: 1vw;
@@ -37,6 +36,7 @@
       font-size: 7vw;
       width: 50vw;
       border: 3px solid $lightBlue;
+      border-right: 3px solid $black;
       background-color: $black;
       color: $white;
       transition: all .9s ease 0s;

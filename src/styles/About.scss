@@ -40,6 +40,7 @@
     &_block{
       @include flexCenter;
       @include hooverGeneralBtn;
+      z-index: $moduleWindowZIndex;
       border-radius: 25px;
       cursor: pointer;
       width: 20vw;
@@ -52,7 +53,7 @@
         color: $black;
         font-size: 2vw;
         transition: all 0.4s ease 0s;
-        user-select: none;
+
       }
     }
     &_block:hover{
@@ -60,7 +61,7 @@
       border-radius:  25% 0;
     }
     &_block:active{
-      border-radius: 60%;
+      border-radius: 0 25% ;
     }
     .hoverd-block{
       background-color: $white;
@@ -68,8 +69,8 @@
     }
     .hoverd-block:hover > h3{
       font-size: 2.2vw;
-      text-shadow: $lightBlue 1px 0 10px;
-      color: $white;
+      text-shadow: $black 1px 0 70px;
+      color: $lightBlue;
     }
   }
   

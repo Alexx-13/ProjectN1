@@ -26,7 +26,7 @@
     }
     &_a, &_b, &_c{
       display: flex;
-      padding: 10% 0;
+      padding: 10% 0;      
 
       .text-block{
         position: relative;
@@ -35,6 +35,7 @@
         width: 50vw;
         padding-left: 5vw;
         flex-direction: column;
+        
         .down-btn{
           @include correctBtn;
           background-color: transparent;
@@ -45,7 +46,6 @@
             width: 70px;
             -webkit-transition: all $fastTransitionTime ease-in;
             transition: all $fastTransitionTime ease-in;
-            
           }
 
           img:hover{
@@ -55,21 +55,27 @@
             transition: all $fastTransitionTime ease-in;
           }
         }
-
         
         &_container{
           color: $black;
           background-color: $white;
           margin-top: $marginAlignGeneral;
-          padding: 0 $paddingJustifyGeneral;
           box-shadow: 0 0 10px rgba(0,0,0,0.5);
           border-radius: $borderRadius;
-          h2{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
+          
+          &_title{
+            @include flexSpaceBetweenHW;
             height: 70px;
-            text-shadow: $lightBlue 1px 0 10px;
+            text-align: center;
+            border-radius: 50px 50px 0px 0;
+            background-color: $lightBlue;
+            h2{
+              @include pureDiv;
+              display: flex;
+              text-shadow: $lightBlue 1px 0 10px;
+              padding-left: $paddingJustifyGeneral;
+              color: $white;
+            }
             a{
               display: flex;
               justify-content: flex-end;
@@ -80,7 +86,6 @@
                 -webkit-transition: all $fastTransitionTime ease-in;
                 transition: all $fastTransitionTime ease-in;
                 box-shadow: inset 0 0 5px 5px rgba(39, 168, 228, 0.5);
-                padding: 2px;
                 border-radius: 70%;
               }
             }
@@ -94,6 +99,10 @@
               animation: stopAroundCircle 1s linear infinite;
             }
           }
+          p{
+            padding: 0 $paddingJustifyGeneral;
+          }
+       
           &_btn{
             @include flexEnd;
             margin: $marginAlignGeneral;
@@ -124,10 +133,10 @@
         
         &_central-object{
           border-radius: 50%;
+
           img{
             width: 30vw;
             height: 30vw;
-            
           }
         }
         &_orbit{

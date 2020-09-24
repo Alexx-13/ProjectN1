@@ -88,7 +88,7 @@
 
 .check:checked ~ .switch {
   right: 2px;
-  left: 22px;
+  left: 30px;
   transition: $generalTransitionTime cubic-bezier(0.785, 0.135, 0.150, 0.860);
   transition-property: left, right;
   transition-delay: .05s, 0s;

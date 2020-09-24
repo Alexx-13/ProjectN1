@@ -116,7 +116,7 @@ export default function MainAnimtion() {
             paragraphC={t('AnimationBlockC3')}
             linkIcon={elang}
             link={elangLink}
-            nextDiv={document.querySelector('.footer')}
+            nextDiv={document.querySelector('.senior-circle')}
           />
 
         </div>
@@ -167,12 +167,15 @@ const TextBlock = (parameters) => {
   return (
     <div className="text-block">
       <div className="text-block_container">
-        <h2>
-          {parameters.heading}
+        <div className="text-block_container_title">
+          <h2>
+            {parameters.heading}
+          </h2>
           {parameters.link && parameters.linkIcon
-            ? <a href={parameters.link} target="_blank"><img src={parameters.linkIcon} /></a>
-            : null}
-        </h2>
+              ? <a href={parameters.link} target="_blank"><img src={parameters.linkIcon} /></a>
+              : null}
+        </div>
+        
         <p>{parameters.text}</p>
         <div className="text-block_container_btn">
           <button onClick={() => {

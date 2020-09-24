@@ -52,7 +52,6 @@
   &_list{
     @include flexCenterHW;
     font-size: 1.2vw;
-    user-select: none;
   }
   button{
     @include correctBtn;
@@ -120,7 +119,6 @@
       &_list{
         @include flexCenterHW;
         font-size: 3vw;
-        user-select: none;
       }
     }
   }

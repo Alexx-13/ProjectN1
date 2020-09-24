@@ -1,0 +1,12 @@
+@import "../shared/mixins/mixins.scss";
+@import "../shared/variables/variables.scss";
+
+.coat{
+  @include flexCenterHW;
+  top: 0px;
+  position: fixed;
+  z-index: 55;
+  background: rgb(0, 0, 0);
+  opacity: 0.5;
+  transition: all 0.4s ease 0s;
+};

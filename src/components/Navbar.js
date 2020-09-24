@@ -80,6 +80,7 @@ export default function Navbar(props) {
           <div className="navbar_right_menu">
             <button onClick={() => {
               setShowModuleWindow(!showModuleWindow);
+              props.appearCoat(!showModuleWindow)
             }}
             >
               {t('NavbarExamples')}
@@ -90,7 +91,7 @@ export default function Navbar(props) {
       </nav>
       <ScrollIndicator />
       {showModuleWindow
-        ? <ModuleWindow updateShowModuleWindow={setShowModuleWindow} />
+        ? <ModuleWindow updateShowModuleWindow={setShowModuleWindow} appearCoat={props.appearCoat}/>
         : null}
     </div>
 

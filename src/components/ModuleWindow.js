@@ -19,7 +19,10 @@ export default function ModuleWindow(props) {
             {t('ModuleWindowTitleA')}
           </h3>
           <button
-            onClick={() => { props.updateShowModuleWindow(false); }}
+            onClick={() => { 
+              props.updateShowModuleWindow(false);
+              props.appearCoat(false) 
+            }}
           >
             X
           </button>
