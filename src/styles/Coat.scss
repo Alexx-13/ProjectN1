@@ -9,4 +9,14 @@
   background: rgb(0, 0, 0);
   opacity: 0.5;
   transition: all 0.4s ease 0s;
+  animation: appearCoat .4s ease-in;
 };
+
+@keyframes appearCoat{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}
