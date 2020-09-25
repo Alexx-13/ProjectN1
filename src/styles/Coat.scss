@@ -1,5 +1,9 @@
 @import "../shared/mixins/mixins.scss";
 @import "../shared/variables/variables.scss";
+@font-face{
+  font-family: $logoFont;
+  src: url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap")
+}
 
 .coat{
   @include flexCenterHW;

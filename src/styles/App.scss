@@ -1,13 +1,10 @@
 @import "../shared/mixins/mixins.scss";
 @import "../shared/variables/variables.scss";
 
-
-
 html,body{
   @include pureDiv;
   @include hundredHW;
   user-select: none;
-  // src: url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
   /* Mozilla*/
   scrollbar-arrow-color:  $lightBlue;
   scrollbar-width: thin;
