@@ -24,9 +24,13 @@ export default function Goodbye(){
 
   useEffect(() => {
     if(windowHeight >= 95){
-      setMoveClassNameA("goodbye-move-a")
-      setMoveClassNameB("goodbye-move-b")
-      setMoveClassNameC("goodbye-move-c")
+      setMoveClassNameA("goodbye-move-a");
+      setMoveClassNameB("goodbye-move-b");
+      setMoveClassNameC("goodbye-move-c");
+    } else {
+      setMoveClassNameA("");
+      setMoveClassNameB("");
+      setMoveClassNameC("");
     }
   }, [windowHeight])
 

@@ -22,7 +22,6 @@
     @include flexCenter;
     
     &_logo{
-      // padding: $paddingJustifyGeneral $paddingJustifyGeneral 0 $paddingJustifyGeneral;
       h2{
         @include correctBtn;
         font-size: $logoFontSize;
