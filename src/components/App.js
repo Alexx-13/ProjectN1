@@ -13,7 +13,7 @@ export default function App() {
   const [appearCoat, setAppearCoat] = useState(false)
   return (
     <div className="App">
-      <AppPreloader />
+      {/* <AppPreloader /> */}
       {appearCoat ? <Coat appearCoat={setAppearCoat}/> : null}
       <div className="pre-App">
         <Navbar appearCoat={setAppearCoat}/>
