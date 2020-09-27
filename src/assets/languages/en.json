@@ -29,17 +29,17 @@
   "AnimationBtnUnactive": "Show detailes",
   "AnimationBtnActive": "Hide detailes",
 
-  "AnimationBlockA1": "JS - basics, inheritance, API, async/await, Event Loop",
-  "AnimationBlockA2": "CSS - SCSS, animations, keyframes, responsive design",
-  "AnimationBlockA3": "HTML - DOM, tags, optimization, order of rendering",
+  "AnimationBlockA1": "1. JS - basics, inheritance, API, async/await, Event Loop",
+  "AnimationBlockA2": "2. CSS - SCSS, animations, keyframes, responsive design",
+  "AnimationBlockA3": "3. HTML - DOM, tags, optimization, order of rendering",
 
-  "AnimationBlockB1": "React/Redux - basics, code seporation with class components, life cycle components",
-  "AnimationBlockB2": "React Hooks - basics hooks, usage of them, functional react",
-  "AnimationBlockB3": "Figma - basics, creation of my own projects",
+  "AnimationBlockB1": "1. React/Redux - basics, code seporation with class components, life cycle components",
+  "AnimationBlockB2": "2. React Hooks - basics hooks, usage of them, functional react",
+  "AnimationBlockB3": "3. Figma - basics, creation of my own projects",
 
-  "AnimationBlockC1": "Webpack - self-made bundle, understanding of the proccess",
-  "AnimationBlockC2": "Jest Tests - basics and couverage of code with tests",
-  "AnimationBlockC3": "SVG animation - understanding and practical skills",
+  "AnimationBlockC1": "1. Webpack - self-made bundle, understanding of the proccess",
+  "AnimationBlockC2": "2. Jest Tests - basics and couverage of code with tests",
+  "AnimationBlockC3": "3. SVG animation - understanding and practical skills",
 
   "FooterSection": "The Goal",
 
