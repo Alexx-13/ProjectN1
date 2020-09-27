@@ -26,43 +26,24 @@
     }
     &_a, &_b, &_c{
       display: flex;
-      padding: 10% 0;      
+      padding: 10% 0;    
 
       .text-block{
         position: relative;
         z-index: 50;
         @include flexCenterHW;
         width: 50vw;
+        height: 100%;
         padding-left: 5vw;
         flex-direction: column;
-        
-        
-        .down-btn{
-          @include correctBtn;
-          background-color: transparent;
-          margin: $marginAlignGeneral;
-          img{
-            @include correctBtn;
-            height: 30px;
-            width: 70px;
-            -webkit-transition: all $fastTransitionTime ease-in;
-            transition: all $fastTransitionTime ease-in;
-          }
-
-          img:hover{
-            height: 50px;
-            width: 100px;
-            -webkit-transition: all $fastTransitionTime ease-in;
-            transition: all $fastTransitionTime ease-in;
-          }
-        }
         
         &_container{
           color: $black;
           background-color: $white;
-          margin-top: $marginAlignGeneral;
+          height: 100%;
           box-shadow: 0 0 10px rgba(0,0,0,0.5);
           border-radius: $borderRadius;
+          border-bottom: 0.3vw solid $lightBlue;
           
           &_title{
             @include flexSpaceBetweenHW;
@@ -103,29 +84,39 @@
           
           p{
             padding: 0 $paddingJustifyGeneral;
+            margin-bottom: 0;
           }
        
           &_btn{
-            @include flexCenterHW;
-            margin: $marginAlignGeneral 0;
+            display: flex;
+            padding: $paddingJustifyGeneral;
 
             button{
               @include navBtnStyles;
               font-family: $logoFont;
               transition: all $generalTransitionTime ease-in;
               box-shadow: 0 0 10px rgba(83, 67, 67, 0.5);
-              width: 30vw;
-              height: 3em;
+              width: 30%;
+              height: 100%;
+              padding: 5px;
+              font-size: 1.8vw;
             }
   
             button:hover{
               @include hooverGeneralBtn;
             }
           }
-          
-          li{
-            color: $lightBlue;
+          ul{
+            height: 5vw;
+            width: 100%;
+            padding: 0;
+            li{
+              color: $lightBlue;
+              list-style-type: none;
+              font-size: 1.1vw;
+            }
           }
+         
 
           
         }

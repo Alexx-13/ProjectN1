@@ -23,7 +23,6 @@ import jest from '../assets/images/jest-logo.svg';
 import english from '../assets/images/english-flag-logo.svg';
 
 import elang from '../assets/images/elang-logo.svg';
-import arrowDown from '../assets/images/arrows/arrow-down.svg';
 
 export default function MainAnimtion() {
   const { t, i18n } = useTranslation();
@@ -228,7 +227,7 @@ const TextBlock = (parameters) => {
         </div>
         
         <p>{parameters.text}</p>
-        {appearSkills
+        {/* {appearSkills
           ? (
             <ul>
               <li>{parameters.paragraphA}</li>
@@ -236,8 +235,13 @@ const TextBlock = (parameters) => {
               <li>{parameters.paragraphC}</li>
             </ul>
           )
-          : null}
+          : null} */}
         <div className="text-block_container_btn">
+          <ul>
+            <li>{appearSkills ? parameters.paragraphA : null}</li>
+            <li>{appearSkills ? parameters.paragraphB : null}</li>
+            <li>{appearSkills ? parameters.paragraphC : null}</li>
+          </ul>
           <button onClick={() => {
             setAppearSkills(!appearSkills);
             setBtnText(!btnText);
