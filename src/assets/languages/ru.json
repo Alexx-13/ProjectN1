@@ -30,17 +30,17 @@
   "AnimationBtnUnactive": "Показать описание",
   "AnimationBtnActive": "Скрыть описание",
 
-  "AnimationBlockA1": "JS - основы, наследование, API, async/await, Event Loop",
-  "AnimationBlockA2": "CSS - SCSS, анимации, keyframes, отзывчивый дизайн",
-  "AnimationBlockA3": "HTML - DOM, теги, оптимизация, порядок рендеринга",
+  "AnimationBlockA1": "1. JS - основы, наследование, API, async/await, Event Loop",
+  "AnimationBlockA2": "2. CSS - SCSS, анимации, keyframes, отзывчивый дизайн",
+  "AnimationBlockA3": "3. HTML - DOM, теги, оптимизация, порядок рендеринга",
 
-  "AnimationBlockB1": "React/Redux - основы, разделение кода классовыми/функциональными компонентами, жизненный цикл компонента",
-  "AnimationBlockB2": "React Hooks - основные хуки, порядок использования, функциональный React",
-  "AnimationBlockB3": "Figma - основы, создание собственных проектов",
+  "AnimationBlockB1": "1. React/Redux - основы, разделение кода классовыми/функциональными компонентами, жизненный цикл компонента",
+  "AnimationBlockB2": "2. React Hooks - основные хуки, порядок использования, функциональный React",
+  "AnimationBlockB3": "3. Figma - основы, создание собственных проектов",
 
-  "AnimationBlockC1": "Webpack - создание самостоятельных сборок, понимание процесса",
-  "AnimationBlockC2": "Jest Tests - основы и покрытие кода тестами",
-  "AnimationBlockC3": "SVG animation - понимание и практическое использование",
+  "AnimationBlockC1": "1. Webpack - создание самостоятельных сборок, понимание процесса",
+  "AnimationBlockC2": "2. Jest Tests - основы и покрытие кода тестами",
+  "AnimationBlockC3": "3. SVG animation - понимание и практическое использование",
 
   "FooterSection": "Моя Цель",
   
