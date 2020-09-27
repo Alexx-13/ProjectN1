@@ -66,7 +66,7 @@ function SkillsSlider(parameters) {
     <div className="skills-slider">
       {index !== 0
         ? <button onClick={() => { decreaseIndex(); }}><img src={arrowLeft} className="active-image" /></button>
-        : <img src={arrowLeftGray} className="unactive-image" />}
+        : <button><img src={arrowLeftGray} className="unactive-image" /></button>}
 
       <div className="skills-slider_list">
         <SkillsList
@@ -76,7 +76,7 @@ function SkillsSlider(parameters) {
 
       {index < 2
         ? <button onClick={() => { increaseIndex(); }}><img src={arrowRight} className="active-image" /></button>
-        : <img src={arrowRightGray} className="unactive-image" />}
+        : <button><img src={arrowRightGray} className="unactive-image" /></button>}
 
     </div>
   );

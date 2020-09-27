@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import FlyAnimation from './FlyAnimation';
 
@@ -36,6 +36,32 @@ export default function MainAnimtion() {
   const rssLinkReact = 'https://rs.school/react/';
   const elangLink = 'https://easylang.app/';
 
+  const [desctopVersion, setDesctopVersion] = useState(true);
+
+  const checkForDesctop = () => {
+    window.addEventListener("resize", () => {
+      if(window.innerWidth >= 1024){
+        setDesctopVersion(true)
+      } else {
+        setDesctopVersion(false)
+      }
+    });
+
+    window.addEventListener("load", () => {
+      if(window.innerWidth >= 1024){
+        setDesctopVersion(true)
+      } else {
+        setDesctopVersion(false)
+      }
+    });
+  };
+
+  useEffect(() => {
+    checkForDesctop();
+
+    return checkForDesctop();
+  }, [])
+
   return (
     <div className="main-animation">
       <div className="main-animation_container">
@@ -45,44 +71,65 @@ export default function MainAnimtion() {
           <h2><i>{t('MainSection')}</i></h2>
           <div className="main-animation_container_head_right" />
         </div>
-
-        <div className="main-animation_container_a">
-          <a href={rssLink} target="_blank">
-            <CirclesBlock
-              id="first-info-circles-block"
-              center={rss}
-              satelliteA={html}
-              satelliteB={css}
-              satelliteC={scss}
-              satelliteD={js}
-            />
-          </a>
-          <TextBlock
-            heading={t('AnimationHeadingA')}
-            text={t('AnimationParagraphA')}
-            descriptionAppear={appearFirstSkills}
-            paragraphA={t('AnimationBlockA1')}
-            paragraphB={t('AnimationBlockA2')}
-            paragraphC={t('AnimationBlockA3')}
-            linkIcon={rss}
-            link={rssLink}
-            nextDiv={document.querySelector('#second-info-circles-block')}
-          />
-        </div>
+          {desctopVersion ?
+            <div className="main-animation_container_a">
+              <a href={rssLink} target="_blank">
+                <CirclesBlock
+                  id="first-info-circles-block"
+                  center={rss}
+                  satelliteA={html}
+                  satelliteB={css}
+                  satelliteC={scss}
+                  satelliteD={js}
+                />
+              </a>
+              <TextBlock
+                heading={t('AnimationHeadingA')}
+                text={t('AnimationParagraphA')}
+                descriptionAppear={appearFirstSkills}
+                paragraphA={t('AnimationBlockA1')}
+                paragraphB={t('AnimationBlockA2')}
+                paragraphC={t('AnimationBlockA3')}
+                linkIcon={rss}
+                link={rssLink}
+              />
+            </div>
+          : <MobileTextAndCircle 
+              heading={t('AnimationHeadingA')}
+              text={t('AnimationParagraphA')}
+              descriptionAppear={appearFirstSkills}
+              paragraphA={t('AnimationBlockA1')}
+              paragraphB={t('AnimationBlockA2')}
+              paragraphC={t('AnimationBlockA3')}
+              linkIcon={rss}
+              link={rssLink}
+            />}
         <FlyAnimation />
 
-        <div className="main-animation_container_b">
-          <a href={rssLinkReact} target="_blank">
-            <CirclesBlock
-              id="second-info-circles-block"
-              center={rssReact}
-              satelliteA={react}
-              satelliteB={reactHooks}
-              satelliteC={reactRedux}
-              satelliteD={figma}
+        {desctopVersion ? 
+          <div className="main-animation_container_b">
+            <a href={rssLinkReact} target="_blank">
+              <CirclesBlock
+                id="second-info-circles-block"
+                center={rssReact}
+                satelliteA={react}
+                satelliteB={reactHooks}
+                satelliteC={reactRedux}
+                satelliteD={figma}
+              />
+            </a>
+            <TextBlock
+              heading={t('AnimationHeadingB')}
+              text={t('AnimationParagraphB')}
+              descriptionAppear={appearSecondSkills}
+              paragraphA={t('AnimationBlockB1')}
+              paragraphB={t('AnimationBlockB2')}
+              paragraphC={t('AnimationBlockB3')}
+              linkIcon={rssReact}
+              link={rssLinkReact}
             />
-          </a>
-          <TextBlock
+          </div>
+        : <MobileTextAndCircle 
             heading={t('AnimationHeadingB')}
             text={t('AnimationParagraphB')}
             descriptionAppear={appearSecondSkills}
@@ -91,23 +138,33 @@ export default function MainAnimtion() {
             paragraphC={t('AnimationBlockB3')}
             linkIcon={rssReact}
             link={rssLinkReact}
-            nextDiv={document.querySelector('#third-info-circles-block')}
-          />
-        </div>
+          />}
         <FlyAnimation />
 
-        <div className="main-animation_container_c">
-          <a href={elangLink} target="_blank">
-            <CirclesBlock
-              id="third-info-circles-block"
-              center={junior}
-              satelliteA={webpack}
-              satelliteB={jest}
-              satelliteC={svg}
-              satelliteD={english}
+        {desctopVersion ? 
+          <div className="main-animation_container_c">
+            <a href={elangLink} target="_blank">
+              <CirclesBlock
+                id="third-info-circles-block"
+                center={junior}
+                satelliteA={webpack}
+                satelliteB={jest}
+                satelliteC={svg}
+                satelliteD={english}
+              />
+            </a>
+            <TextBlock
+              heading={t('AnimationHeadingC')}
+              text={t('AnimationParagraphC')}
+              descriptionAppear={appearThirdSkills}
+              paragraphA={t('AnimationBlockC1')}
+              paragraphB={t('AnimationBlockC2')}
+              paragraphC={t('AnimationBlockC3')}
+              linkIcon={elang}
+              link={elangLink}
             />
-          </a>
-          <TextBlock
+        </div>
+        : <MobileTextAndCircle 
             heading={t('AnimationHeadingC')}
             text={t('AnimationParagraphC')}
             descriptionAppear={appearThirdSkills}
@@ -116,10 +173,8 @@ export default function MainAnimtion() {
             paragraphC={t('AnimationBlockC3')}
             linkIcon={elang}
             link={elangLink}
-            nextDiv={document.querySelector('.senior-circle')}
-          />
-
-        </div>
+            
+          />}
         <FlyAnimation />
 
       </div>
@@ -160,10 +215,6 @@ const TextBlock = (parameters) => {
   const [appearSkills, setAppearSkills] = useState(parameters.descriptionAppear);
   const [btnText, setBtnText] = useState(true);
 
-  const scrollToADiv = (currentDiv) => {
-    currentDiv.scrollIntoView({ block: 'center', behavior: 'smooth' });
-  };
-
   return (
     <div className="text-block">
       <div className="text-block_container">
@@ -172,21 +223,11 @@ const TextBlock = (parameters) => {
             {parameters.heading}
           </h2>
           {parameters.link && parameters.linkIcon
-              ? <a href={parameters.link} target="_blank"><img src={parameters.linkIcon} /></a>
-              : null}
+            ? <a href={parameters.link} target="_blank"><img src={parameters.linkIcon} /></a>
+          : null}
         </div>
         
         <p>{parameters.text}</p>
-        <div className="text-block_container_btn">
-          <button onClick={() => {
-            setAppearSkills(!appearSkills);
-            setBtnText(!btnText);
-          }}
-          >
-            {btnText ? t('AnimationBtnUnactive') : t('AnimationBtnActive')}
-          </button>
-        </div>
-
         {appearSkills
           ? (
             <ul>
@@ -196,15 +237,54 @@ const TextBlock = (parameters) => {
             </ul>
           )
           : null}
+        <div className="text-block_container_btn">
+          <button onClick={() => {
+            setAppearSkills(!appearSkills);
+            setBtnText(!btnText);
+          }}
+          >
+            {btnText ? t('AnimationBtnUnactive') : t('AnimationBtnActive')}
+          </button>
+        </div>
       </div>
-      <button
-        className="down-btn"
-        onClick={() => {
-          scrollToADiv(parameters.nextDiv);
-        }}
-      >
-        <img src={arrowDown} />
-      </button>
     </div>
   );
 };
+
+const MobileTextAndCircle = (parameters) => {
+  const { t, i18n } = useTranslation();
+  const [appearSkills, setAppearSkills] = useState(parameters.descriptionAppear);
+  const [btnText, setBtnText] = useState(true);
+
+  return (
+    <div className="mobile-t-c"> 
+      <div className="mobile-t-c_title">
+        <a href={parameters.link} target="_blank"><h2>{parameters.heading}</h2></a>
+      </div>
+      <div className="mobile-t-c_main">
+        <div className="mobile-t-c_main_text">
+          <p>{parameters.text}</p>
+          {appearSkills ?
+            <ul>
+              <li>{parameters.paragraphA}</li>
+              <li>{parameters.paragraphB}</li>
+              <li>{parameters.paragraphC}</li>
+            </ul>
+          : null}
+        </div>
+        <div className="mobile-t-c_main_circle">
+          <a href={parameters.link} target="_blank"><img src={parameters.linkIcon} /></a>
+        </div>
+      </div>
+      <div className="mobile-t-c_footer">
+        <button onClick={() => {
+          setAppearSkills(!appearSkills);
+          setBtnText(!btnText);
+        }}
+        >
+          {btnText ? t('AnimationBtnUnactive') : t('AnimationBtnActive')}
+        </button>
+      </div>
+    </div>
+  )
+}

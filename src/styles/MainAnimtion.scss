@@ -36,6 +36,7 @@
         padding-left: 5vw;
         flex-direction: column;
         
+        
         .down-btn{
           @include correctBtn;
           background-color: transparent;
@@ -99,20 +100,21 @@
               animation: stopAroundCircle 1s linear infinite;
             }
           }
+          
           p{
             padding: 0 $paddingJustifyGeneral;
           }
        
           &_btn{
-            @include flexEnd;
-            margin: $marginAlignGeneral;
+            @include flexCenterHW;
+            margin: $marginAlignGeneral 0;
 
             button{
               @include navBtnStyles;
               font-family: $logoFont;
               transition: all $generalTransitionTime ease-in;
               box-shadow: 0 0 10px rgba(83, 67, 67, 0.5);
-              width: 10vw;
+              width: 30vw;
               height: 3em;
             }
   
@@ -120,9 +122,12 @@
               @include hooverGeneralBtn;
             }
           }
+          
           li{
             color: $lightBlue;
           }
+
+          
         }
       }
 
@@ -180,20 +185,88 @@
         border-radius: 70%;
       }
     }
+
+    .mobile-t-c{
+      border-radius: $borderRadius;
+      background-color: $white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin: $marginAlignGeneral 0;
+      z-index: $moduleWindowZIndex;
+      &_title{
+        @include flexCenterHW;
+        background-color: $lightBlue;
+        border-radius: $borderRadius $borderRadius 0 0;
+        a{
+          text-decoration: none;
+        }
+        h2{
+          font-size: 5vw;
+          color: $white;
+        }
+      }
+      &_main{
+        @include flexStart;
+        background-color: $white;
+        &_text{
+          padding: $paddingJustifyGeneral;
+          p{
+            font-size: 2vw;
+            float: left;
+          }
+          ul{
+            font-size: 2vw;
+            color: $lightBlue;
+          }
+        }
+        &_circle{
+          background-repeat: no-repeat;
+          padding: $paddingJustifyGeneral;
+          img{
+            width: 20vw;
+            height: 20vw;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            -webkit-transition: all $fastTransitionTime ease-in;
+            transition: all $fastTransitionTime ease-in;
+          }
+          img:hover{
+            transform: scale(1.1);
+          }
+        }
+      }
+      &_footer{
+        @include flexCenterHW;
+        background-color: $white;
+        border-radius: 0 0 $borderRadius $borderRadius;
+        button{
+          @include navBtnStyles;
+          width: 70vw;
+          height: 7vw;
+          margin: $marginAlignGeneral;
+          font-size: 3vw;
+          color: $black;
+          font-family: "Berkshire Swash", sans-serif;
+        }
+        button:hover{
+          @include hooverGeneralBtn;
+        }
+      }
+    }
   }
 };
-
 
 @-webkit-keyframes spin-right {
   100% {
       -webkit-transform: rotate(360deg);
   }
-}
+};
+
 @-moz-keyframes spin-right {
   100% {
       -moz-transform: rotate(360deg);
   }
-}
+};
+
 @keyframes spin-right {
   100% {
       transform: rotate(360deg);
@@ -207,48 +280,4 @@
   100%{
     border: solid 5px $lightBlue;
   }
-}
-
-
-@media screen and (max-width: 1024px){
-  .main-animation{
-    &_container{
-      &_a, &_b, &_c{
-        flex-direction: column;
-        .text-block{
-          width: 80vw;
-          padding-left: 0;
-          &_container_btn{
-            button{
-              width: 20vw;
-              height: 3em;
-            }
-          }
-        }
-        .circles-block{
-          @include hooverGeneralBtn;
-          border-radius: 50px;
-        }
-      }
-      &_a{
-        .circles-block{
-          background-color: $white;
-          border: 5px solid $black;
-        }
-      }
-      &_b{
-        .circles-block{
-          background-color: $lightBlue;
-          border: 5px solid $black;
-        }
-      }
-      &_c{
-        .circles-block{
-          background-color: $black;
-          border: 5px solid $lightBlue;
-        }
-      }
-    }
-  }
-}
-
+};

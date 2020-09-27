@@ -12,7 +12,6 @@ export default function Navbar(props) {
   const { t, i18n } = useTranslation();
   const [logoContentA, setLogoContentA] = useState('Vi');
   const [logoContentB, setLogoContentB] = useState('sitC');
-  const [switchLanguage, setSwitchLanguage] = useState('English');
   const [showModuleWindow, setShowModuleWindow] = useState(false);
   const [switcherFlag, setSwitcherFlag] = useState(true);
 

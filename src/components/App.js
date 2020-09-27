@@ -10,18 +10,19 @@ import Footer from './Footer';
 import SimpleChatBot from './SimpleChatBot';
 
 export default function App() {
-  const [appearCoat, setAppearCoat] = useState(false)
+  const [appearCoat, setAppearCoat] = useState(false);
+
   return (
     <div className="App">
-      {/* <AppPreloader /> */}
-      {appearCoat ? <Coat appearCoat={setAppearCoat}/> : null}
+      <AppPreloader />
+      {appearCoat ? <Coat appearCoat={setAppearCoat} /> : null}
       <div className="pre-App">
-        <Navbar appearCoat={setAppearCoat}/>
+        <Navbar appearCoat={setAppearCoat} />
         <Head />
         <div className="App_container">
           <Main />
         </div>
-        <SimpleChatBot />
+        {appearCoat ? null : <SimpleChatBot />}
         <Footer />
       </div>
     </div>

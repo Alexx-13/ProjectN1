@@ -48,7 +48,6 @@
           font-size: 2vw;
           text-decoration: underline;
           text-decoration-color: $lightBlue;
-          text-decoration-style: wavy;
         }
 
       }
@@ -78,8 +77,7 @@
 
 #finger-img{
   width: 7vw;
-  border: 5px solid $lightBlue;
-  border-bottom: none;
+  border: 3px solid $lightBlue;
   background-color: #fff;
   border-radius: 70%;
   padding: 1px;
