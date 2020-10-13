@@ -14,7 +14,7 @@ export default function SimpleChatBot() {
     } else if (window.innerWidth < '600') {
       setAppearBot(false);
     } else {
-      setBotWidth('100px');
+      setBotWidth('300px');
       setAppearBot(true);
     }
   };
